@@ -36,7 +36,7 @@ function Search() {
         />
         <button
           type="submit"
-          className="text-white absolute right-2.5 bottom-2.5 bg-sky-500 duration-300 hover:bg-sky-600  focus:outline-nonefont-medium rounded-lg text-xs md:text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-sky-600 dark:focus:ring-sky-700"
+          className="text-white absolute right-1 bottom-1 bg-blue-500 duration-300 hover:bg-blue-600  focus:outline-nonefont-medium rounded-lg md:text-lg text-sm px-4 py-2 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-sky-700"
         >
           Search
         </button>

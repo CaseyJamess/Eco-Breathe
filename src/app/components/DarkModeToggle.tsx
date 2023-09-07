@@ -36,9 +36,9 @@ export default function DarkModeToggle() {
             onClick={toggleTheme}
         >
             {theme === 'light' ? 
-                <FaMoon id="theme-toggle-dark-icon" className="  duration-300 hover:scale-110 w-5 h-5" />
+                <FaMoon id="theme-toggle-dark-icon" className="text-blue-500   w-5 h-5" />
                 : 
-                <FaSun id="theme-toggle-light-icon" className="  duration-300 hover:scale-110 w-5 h-5" />
+                <FaSun id="theme-toggle-light-icon" className="text-blue-500  w-5 h-5" />
             }
         </button>
     );

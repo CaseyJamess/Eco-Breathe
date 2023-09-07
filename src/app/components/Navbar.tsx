@@ -33,8 +33,6 @@ const Navbar: React.FC = () => {
           </span>
         </div>
 
-       
-        
         {/* Toggle button for mobile */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -59,10 +57,7 @@ const Navbar: React.FC = () => {
               <li key={index}>
                 <Link href={item.path}>
                   <span
-                    className={`block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-sky-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${
-                      index === 0
-                        ? "text-white bg-sky-600 md:bg-transparent md:text-sky-600"
-                        : ""
+                    className={`block duration-300 py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent 
                     }
             `}
                   >
@@ -73,7 +68,7 @@ const Navbar: React.FC = () => {
             ))}
           </ul>
           <div className="ml-10 hidden md:flex md:mt-0">
-          <DarkModeToggle/>
+            <DarkModeToggle />
           </div>
         </div>
       </div>

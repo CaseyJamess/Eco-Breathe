@@ -3,11 +3,11 @@ import GaugeChart from 'react-gauge-chart';
 
 function Gauge() {
   return (
-    <div className="w-10/12"> {/* Adjust the width and height using Tailwind classes */}
+    <div className="w-10/12 lg:w-9/12"> 
       <GaugeChart 
         id="gauge" 
         nrOfLevels={5}
-        colors={['#0D853A', '#E8D70D',  '#FF5733', '#D82E2F', '#C70039']}
+        colors={['#22c55e', '#facc15',  '#f97316', '#dc2626', '#5b21b6']} // Tailwind's green, yellow, orange, red, purple
         percent={0}
         arcWidth={0.3}
         hideText={true}
