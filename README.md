@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Version 0.1.0 - 07-09/23
+Author: Casey Jamess
 
-## Getting Started
+Air Active: Optimal Outdoor Timing Based on Air Quality 🌎💨🏃
+Welcome to Air Active — the front-end of a full-stack web application designed for the health-conscious and environmentally aware. Leveraging real-time air quality data from across the globe, our application aids users in determining the ideal times to engage in outdoor activities, ensuring that you're breathing only the best while getting fit.
 
-First, run the development server:
+Screenshot of Air Active https://github.com/CaseyJamess/AirActive/issues/1
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Overview 🌐
+The deteriorating quality of air in various parts of the world has raised genuine health concerns. Air Active seeks to empower individuals with actionable insights about air quality, enabling them to plan their outdoor workouts and activities at times when the air is at its best. Whether you're a morning jogger, an evening cyclist, or just someone looking to take a walk in the park, we're here to ensure that the air you breathe doesn't hamper your health goals.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Technologies 💻
+Language: TypeScript
+Framework: [React utilising Next.JS]
+APIs: [Coming Soon]
+Styling: [Styled using Tailwind CSS]
+Features 🌟
+Global Air Quality Index (AQI) Dashboard: Access real-time air quality metrics from cities around the world.
+Personalised Recommendations: Based on your location and the current AQI, get suggestions on the best times for outdoor activities.
+User Profiles: Save preferences, track activity patterns, add any comments and get customised alerts.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Getting Started 🚀
+Clone the Repository
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+bash
+Copy code
+git clone [your-repo-link]
+Install Dependencies
 
-## Learn More
+bash
+Copy code
+npm install
+Run the Application
 
-To learn more about Next.js, take a look at the following resources:
+bash
+Copy code
+npm start
+Contributing and Issues 🤝
+We welcome contributions, feedback, and suggestions. Feel free to open an issue or submit a pull request. If you found any bugs or would like to see new features, let us know!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Author 📚
+[Casey James] - Passionate full-stack developer with a knack for creating solutions that make a difference. Looking for exciting opportunities to bring innovative ideas to life. Connect with me on LinkedIn!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+License 📜
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Deploy on Vercel
+Support the Project 💖
+If you find this project helpful or useful in any way, consider buying me a coffee! Any support is deeply appreciated and helps maintain the future development of this project.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+https://paypal.me/cjm93?country.x=GB&locale.x=en_GB
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
