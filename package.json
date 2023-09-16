@@ -18,7 +18,7 @@
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "lodash": "^4.17.21",
-    "next": "13.4.19",
+    "next": "^13.4.19",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",
@@ -30,7 +30,6 @@
   },
   "devDependencies": {
     "@types/chart.js": "^2.9.38",
-    "@types/d3": "^7.4.0",
     "@types/react-gauge-chart": "^0.4.0"
   }
 }
