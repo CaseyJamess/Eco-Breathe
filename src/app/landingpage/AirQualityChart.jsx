@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import React, { useEffect, useRef } from "react";
 import {
@@ -11,8 +11,8 @@ import {
   ChartConfiguration,
 } from "chart.js";
 
-const AirQualityChart: React.FC = () => {
-  const chartRef = useRef<HTMLCanvasElement | null>(null);
+const AirQualityChart = () => {
+  const chartRef = useRef(null);
 
   useEffect(() => {
     if (chartRef.current) {
@@ -27,32 +27,21 @@ const AirQualityChart: React.FC = () => {
           CategoryScale
         );
 
-        const chartConfig: ChartConfiguration = {
+        const chartConfig = {
           type: "line",
           data: {
             labels: [
               "00:00",
-              
               "02:00",
-
               "04:00",
-
               "06:00",
-
               "08:00",
-
               "10:00",
-
               "12:00",
-
               "14:00",
-
               "16:00",
-
               "18:00",
-
               "20:00",
-
               "22:00",
             ],
             datasets: [

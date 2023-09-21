@@ -41,7 +41,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-white dark:bg-gray-950 dark:shadow-md dark:shadow-neutral-700  py-8">
+    <footer className="bg-white dark:bg-slate-950  py-8">
       <div className="flex flex-col max-w-screen-xl mx-2 px-2 xl:mx-auto">
         {/*
         <div className="flex mb-10 items-center justify-start">
@@ -98,15 +98,15 @@ function Footer() {
                 {link.text}
               </a>
             ))}
-            {/* Social Links below Information Links */}
-            <div className="flex flex-row items-center text-center">
+            {/* Social Links */}
+            <div className="flex flex-row items-center md:justify-start mt-6 md:mt-0 justify-center text-center">
               {socialLinks.map((item, index) => (
                 <a
                   key={index}
                   href={item.path}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block  mr-4 mt-2 hover:text-blue-500  duration-300 text-xl mb-2"
+                  className="block mr-4 mt-2 hover:text-blue-500 duration-300 text-xl mb-2"
                 >
                   {item.icon || item.text}
                 </a>

@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-gray-200 shadow-md shadow-gray-100 dark:shadow-gray-900 dark:bg-gray-950">
+    <nav className="bg-white border-slate-50 shadow-md shadow-gray-100 dark:shadow-slate-800 dark:bg-slate-950">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center">
           <Image

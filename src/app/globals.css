@@ -2,14 +2,14 @@
 
 body {
   font-family: "Space Grotesk", sans-serif;
-  @apply text-neutral-700;
+  @apply text-slate-800;
   @apply bg-white;
  
 }
 
 .dark body {
-  @apply bg-gray-950;
-  @apply text-neutral-50;
+  @apply bg-slate-950;
+  @apply text-slate-50;
 
 }
 

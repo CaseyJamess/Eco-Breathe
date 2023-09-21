@@ -18,7 +18,7 @@ function LandingPage() {
               Know when it's best to step out. Monitor the air quality around
               you with AirActive.
             </h1>
-            <h5 className="mt-4 font-semibold text-xl">Welcome to AirActive!</h5>
+            <h2 className="mt-4 font-semibold text-xl">Welcome to AirActive!</h2>
             <p className="mt-2">
               Your real-time air quality companion. With AirActive, you get
               up-to-the-minute readings on air quality, ensuring you and your
@@ -40,7 +40,7 @@ function LandingPage() {
         </div>
 
         <div className="my-10 w-full justify-center mx-auto">
-          <Info />
+        <Info/>
         </div>
       </div>
     </div>
