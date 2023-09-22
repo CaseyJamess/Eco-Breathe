@@ -7,7 +7,7 @@ function page() {
         {
             id: 0,
             title: "Real-time Air Quality Monitoring",
-            info: "- Don't leave it to chance. Know what you're breathing, as it happens.",
+            info: " - Don't leave it to chance. Know what you're breathing, as it happens.",
         },
         {
             id: 1,
@@ -34,7 +34,7 @@ function page() {
     return (
         <div className="flex min-h-screen flex-col w-full items-center relative">
             <div className=" max-w-screen-xl mt-10 mx-2 px-2 xl:mx-auto">
-                <h3 className="text-2xl text-transparent leading-normal bg-gradient-to-br from-blue-600 via-sky-500 to-green-500 bg-clip-text xl:text-3xl">
+                <h3 className="text-2xl leading-normal accent xl:text-3xl">
                     Join For Free
                 </h3>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-28 ">
@@ -43,13 +43,13 @@ function page() {
                     <div className='lg:order-first order-last'>
 
                         <h1 className="text-5xl mb-8 my-0 lg:my-8">
-                            Get started with AirActive<span className='text-blue-500'>.</span>
+                            Get started with AirActive<span className='accent'>.</span>
                         </h1>
                         {info.map((item) =>
-                        <ul className="list-disc list-inside ">
-                            <li className="mb-2"><strong className='text-blue-500'>{item.title}</strong>{item.info}</li>
-                        </ul>
-)}
+                            <ul className="list-disc list-inside ">
+                                <li className="mb-4"><strong className='accent text-lg'>{item.title}</strong>{item.info}</li>
+                            </ul>
+                        )}
                     </div>
                     {/* Right Col */}
                     <div className="order-first lg:order-last">

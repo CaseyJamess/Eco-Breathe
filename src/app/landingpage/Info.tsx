@@ -34,7 +34,7 @@ const Info: React.FC = () => {
   return (
     <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-20">
       <div>
-        <h2 className="text-start text-xl font-semibold mb-4">
+        <h2 className="text-start accent text-xl font-semibold mb-4">
           Understanding Air Quality with AirActive
         </h2>
         <p className="mb-4">
@@ -53,13 +53,13 @@ const Info: React.FC = () => {
           For advanced features, including detailed analytics and
           personalisation, sign up and join the AirActive community today.
         </p>
-        <button className="bg-blue-500 md:text-lg text-sm rounded-md hover:bg-blue-600 duration-300 text-white py-2 px-4">
+        <button className="button-style">
           Sign Up
         </button>
       </div>
 
       <div className="">
-        <h3 className="text-xl font-semibold">Key</h3>
+        <h3 className="text-xl accent font-semibold">Key</h3>
         {airQualityLevels.map((level) => (
           <div key={level.color} className="flex items-center my-4">
             <div className="relative w-10 h-10 flex-shrink-0 flex-grow-0 mr-4">

@@ -59,7 +59,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row w-full ">
           {/* About AirActive Column */}
           <div className="w-full  md:w-6/12 md:mx-10 items-start ">
-            <h5 className="text-xl text-blue-500 font-semibold mb-4">
+            <h5 className="text-xl accent font-semibold mb-4">
               Get Outside Today!
             </h5>
             <p className="text-base">
@@ -71,7 +71,7 @@ function Footer() {
           </div>
           {/* Nav links Column */}
           <div className=" md:w-3/12 mt-4 md:mt-0 items-start ">
-            <h5 className="text-xl font-semibold text-blue-500 mb-4">
+            <h5 className="text-xl font-semibold accent mb-4">
               Quick Links
             </h5>
             {pageLinks.map((item, index) => (
@@ -86,7 +86,7 @@ function Footer() {
           </div>
           {/* Information Links Column */}
           <div className="md:w-3/12 mt-4 md:mt-0  items-start ">
-            <h5 className="text-xl font-semibold text-blue-500 mb-4">
+            <h5 className="text-xl font-semibold accent mb-4">
               Information
             </h5>
             {informationLinks.map((link, index) => (

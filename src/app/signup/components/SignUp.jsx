@@ -28,7 +28,7 @@ function SignUp() {
   return (
     <div className='w-full'>
       <div className="text-lg w-full">
-        <h3 className="text-5xl my-2">Sign up today<span className='text-blue-500'>!</span></h3>
+        <h3 className="text-5xl my-2">Sign up today<span className='accent'>!</span></h3>
 
         <form onSubmit={handleSubmit} className="space-y-4 rounded-xl mt-6">
           <div className="relative">
@@ -109,7 +109,7 @@ function SignUp() {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white p-2 rounded-xl duration-500 hover:bg-blue-600"
+              className="w-full button-style"
             >
               Sign Up
             </button>

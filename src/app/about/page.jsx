@@ -16,7 +16,7 @@ function About() {
                 </h1>
                 <div className="flex flex-col max-w-screen-lg my-4 mx-auto items-center justify-center ">
                     <div className="mt-4">
-                        <h2 className="font-semibold text-xl">Who We Are</h2>
+                        <h2 className="font-semibold accent text-xl">Who We Are</h2>
                         <p className="mt-2">
                             AirActive is a
                             single-person initiative committed to the vital issue of air quality.
@@ -25,7 +25,7 @@ function About() {
                             public health experts, and air quality analysts. My goal is to provide you with real-time, accurate data on air quality, enabling you to make healthier lifestyle choices and become a more environmentally responsible citizen.
                         </p>
 
-                        <h2 className="mt-4 font-semibold text-xl">Our Mission</h2>
+                        <h2 className="mt-4 font-semibold accent text-xl">Our Mission</h2>
                         <p className="mt-2">
                             The mission of AirActive is dual in nature:
                             First, to equip individuals with the information they need
