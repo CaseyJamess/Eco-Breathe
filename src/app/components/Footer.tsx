@@ -41,7 +41,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-white dark:bg-slate-950  py-8">
+    <footer className="bg-white dark:bg-gray-950 py-8">
       <div className="flex flex-col max-w-screen-xl mx-2 px-2 xl:mx-auto">
         {/*
         <div className="flex mb-10 items-center justify-start">
@@ -78,7 +78,7 @@ function Footer() {
               <a
                 key={index}
                 href={item.path}
-                className="block  hover:text-blue-500  duration-300 text-base mb-2"
+                className="block hover:text-blue-500  duration-300 text-base mb-2"
               >
                 {item.name}
               </a>
@@ -99,7 +99,7 @@ function Footer() {
               </a>
             ))}
             {/* Social Links */}
-            <div className="flex flex-row items-center md:justify-start mt-6 md:mt-0 justify-center text-center">
+            <div className="flex flex-row items-center xl:justify-start mt-6 md:mt-0 justify-center text-center">
               {socialLinks.map((item, index) => (
                 <a
                   key={index}

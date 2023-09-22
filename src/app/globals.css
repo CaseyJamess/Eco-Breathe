@@ -8,9 +8,21 @@ body {
 }
 
 .dark body {
-  @apply bg-slate-950;
+  @apply bg-gradient-to-tr from-gray-950 to-gray-900;
   @apply text-slate-50;
 
+}
+
+.primary-button {
+  @apply bg-green-500 hover:bg-green-600 text-white;
+}
+
+.secondary-button {
+  @apply bg-gray-600 hover:bg-gray-500 text-white;
+}
+
+.input {
+  @apply bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 rounded-xl;
 }
 
 @tailwind base;

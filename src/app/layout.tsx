@@ -16,9 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        {/* Fill with other Meta for SEO etc*/}
-      </head>
+      <head>{/* Fill with other Meta for SEO etc*/}</head>
       <body>
         <Navbar />
         {children}

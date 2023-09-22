@@ -18,17 +18,17 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-slate-50 shadow-md shadow-gray-100 dark:shadow-slate-800 dark:bg-slate-950">
+    <nav className="bg-white border-slate-50   dark:bg-gray-950">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center">
           <Image
             src="/Air-Active.svg"
             alt="Logo"
-            width={60}
-            height={60}
+            width={40}
+            height={40}
             className="mr-3"
           />
-          <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             AirActive
           </span>
         </div>

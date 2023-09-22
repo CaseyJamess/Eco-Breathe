@@ -28,7 +28,7 @@ function SignUp() {
   return (
     <div className='w-full'>
       <div className="text-lg w-full">
-        <h3 className="text-5xl my-2">Create a new account<span className='text-blue-500'>.</span></h3>
+        <h3 className="text-5xl my-2">Sign up today<span className='text-blue-500'>!</span></h3>
 
         <form onSubmit={handleSubmit} className="space-y-4 rounded-xl mt-6">
           <div className="relative">
@@ -40,7 +40,7 @@ function SignUp() {
               type="text"
               id="username"
               name="username"
-              className="mt-1 p-2 pt-6 pl-4 w-full rounded-xl bg-gray-50 dark:bg-gray-800 dark:text-gray-300"
+              className="mt-1 p-2 pt-6 pl-4 w-full input"
               value={formData.username}
               onChange={handleChange}
             />
@@ -55,7 +55,7 @@ function SignUp() {
                 type="text"
                 id="firstName"
                 name="firstName"
-                className="mt-1 p-2 pt-6 pl-4 w-full bg-gray-50 rounded-xl dark:bg-gray-800 dark:text-gray-300"
+                className="mt-1 p-2 pt-6 pl-4 w-full input"
                 value={formData.firstName}
                 onChange={handleChange}
               />
@@ -69,7 +69,7 @@ function SignUp() {
                 type="text"
                 id="lastName"
                 name="lastName"
-                className="mt-1 p-2 pt-6 pl-4 w-full bg-gray-50 rounded-xl text-gray-700 dark:bg-gray-800 dark:text-gray-300"
+                className="mt-1 p-2 pt-6 pl-4 w-full input"
                 value={formData.lastName}
                 onChange={handleChange}
               />
@@ -84,7 +84,7 @@ function SignUp() {
               type="email"
               id="email"
               name="email"
-              className="mt-1 p-2 pt-6 pl-4 w-full bg-gray-50 rounded-xl dark:bg-gray-800 dark:text-gray-300"
+              className="mt-1 p-2 pt-6 pl-4 w-full input"
               value={formData.email}
               onChange={handleChange}
             />
@@ -98,7 +98,7 @@ function SignUp() {
               type="password"
               id="password"
               name="password"
-              className="mt-1 p-2 pt-6 pl-4 w-full bg-gray-50 rounded-xl dark:bg-gray-800 "
+              className="mt-1 p-2 pt-6 pl-4 w-full input "
               value={formData.password}
               onChange={handleChange}
             />

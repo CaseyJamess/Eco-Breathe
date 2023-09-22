@@ -32,7 +32,7 @@ const Info: React.FC = () => {
   ];
 
   return (
-    <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-20">
       <div>
         <h2 className="text-start text-xl font-semibold mb-4">
           Understanding Air Quality with AirActive

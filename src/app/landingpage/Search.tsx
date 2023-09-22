@@ -30,13 +30,13 @@ function Search() {
         <input
           type="search"
           id="default-search"
-          className="block w-full text-xs p-4 pl-10 md:text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="block w-full text-xs p-4 pl-10 md:text-sm input"
           placeholder="Search for a City..."
           required
         />
         <button
           type="submit"
-          className="text-white absolute right-1 bottom-1 bg-blue-500 duration-300 hover:bg-blue-600  focus:outline-nonefont-medium rounded-lg md:text-lg text-sm px-4 py-2 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-sky-700"
+          className="text-white absolute right-1 bottom-1 bg-blue-500 duration-300 hover:bg-blue-600  focus:outline-nonefont-medium rounded-xl md:text-lg text-sm px-4 py-2 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-sky-700"
         >
           Search
         </button>
