@@ -28,10 +28,10 @@ function SignUp() {
   return (
     <div className='w-full'>
       <div className="text-lg w-full">
-        <h3 className="text-5xl my-2">Sign up today<span className='accent'>!</span></h3>
 
-        <form onSubmit={handleSubmit} className="space-y-4 rounded-xl mt-6">
-          <div className="relative">
+        <form onSubmit={handleSubmit} className="space-y-4 p-8 bg-neutral-50 dark:bg-gray-800 rounded-xl mt-6">
+        <h3 className="text-5xl mt-2">Sign up today<span className='accent'>!</span></h3>
+          <div className="relative mt-2">
             <BsFillPersonVcardFill className="absolute text-gray-400 right-2 top-1/2 transform -translate-y-1/2" />
             <label htmlFor="username" className="absolute text-xs font-medium px-2 top-2">
               Username

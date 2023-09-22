@@ -4,29 +4,23 @@ body {
   font-family: "Space Grotesk", sans-serif;
   @apply text-gray-700;
   @apply bg-white;
- 
 }
 
 .dark body {
   @apply bg-gradient-to-tr from-gray-950 to-gray-900;
   @apply text-gray-100;
-
 }
-
-
 
 .button-style {
   @apply bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 rounded-md md:text-lg text-sm text-center duration-300 text-white py-2 px-4;
 }
 
-
-.accent{
+.accent {
   @apply text-blue-700 dark:text-blue-500;
 }
 
-
 .input {
-  @apply bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 rounded-xl;
+  @apply bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-900 rounded-xl;
 }
 
 @tailwind base;

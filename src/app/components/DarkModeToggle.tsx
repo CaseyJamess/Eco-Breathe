@@ -41,7 +41,7 @@ export default function DarkModeToggle() {
       {theme === "light" ? (
         <FaMoon
           id="theme-toggle-dark-icon"
-          className="text-blue-500   w-5 h-5"
+          className="text-blue-700  w-5 h-5"
         />
       ) : (
         <FaSun
