@@ -11,7 +11,7 @@ function About() {
     return (
         <div className="w-full">
             <div className='flex flex-col max-w-screen-xl mt-4 mx-2 xl:mx-auto px-2 xl:mt-10'>
-                <h1 className="text-2xl text-transparent leading-normal bg-gradient-to-br from-blue-600 via-sky-500 to-green-500 bg-clip-text xl:text-3xl">
+                <h1 className="text-3xl  leading-normal ">
                     About AirActive
                 </h1>
                 <div className="flex flex-col max-w-screen-lg my-4 mx-auto items-center justify-center ">
@@ -41,7 +41,7 @@ function About() {
                     <div className="my-10 w-full mx-auto flex flex-row items-start justify-start">
                         <button
                             onClick={() => setShowSignUp(true)}
-                            className="md:text-lg text-sm text-center button-style items-center mr-2"
+                            className="md:text-lg text-sm text-center button-style2 items-center mr-2"
                         >
                             Sign Up
                         </button>

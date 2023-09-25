@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/landingpage/Gauge.jsx", "src/app/landingpage/LandingPage.jsx", "src/app/landingpage/Info.tsx", "src/app/landingpage/AirQualityChart.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/landingpage/Gauge.jsx", "src/app/landingpage/LandingPage.jsx", "src/app/landingpage/Info.tsx", "src/app/landingpage/AirQualityChart.jsx", "src/app/landingpage/Search.jsx"],
   "exclude": ["node_modules"]
 }

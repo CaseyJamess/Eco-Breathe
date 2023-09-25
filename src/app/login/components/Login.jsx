@@ -67,7 +67,7 @@ function LoginComponent() {
                 </button>
             </div>
         </form>
-    )
+    );
 }
 
 export default LoginComponent;
