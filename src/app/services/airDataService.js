@@ -11,3 +11,18 @@ export const fetchData = async () => {
     return { error: "Failed to fetch data from server." };
   }
 };
+
+
+export const sendData = async (payload) => {
+
+  try {
+
+    const response = await axios.post(`${Server_URL}/api/send_data`, payload);
+    return response.data;
+
+  }
+  catch (error) {
+    console.log('Error sending data', error)
+    return { error: "Failed to send data to server" }
+  }
+}
