@@ -13,13 +13,18 @@ export const fetchData = async () => {
 };
 
 
-export const sendData = async (payload) => {
-
+export const sendLocationData = async (longitude, latitude) => {
+  console.log('POST message sent to backend', longitude, latitude);
   try {
-
-    const response = await axios.post(`${Server_URL}/api/send_data`, payload);
+    const data = {
+      coords: {
+        longitude: longitude,
+        latitude: latitude
+      }
+    };
+    const response = await axios.post(`${Server_URL}/api/v1/fetch_air_quality`, data);
     return response.data;
-
+    
   }
   catch (error) {
     console.log('Error sending data', error)
