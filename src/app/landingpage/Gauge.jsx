@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import GaugeChart from "react-gauge-chart";
-import { fetchData } from "../services/airDataService";
+
+// // Functionality Used in Development
+//import { fetchData } from "../services/airDataService";
 
 function Gauge() {
   const [airData, setAirData] = useState(null);
@@ -33,7 +35,10 @@ function Gauge() {
         arcWidth={0.3}
         hideText={true}
       />
-      <button onClick={handleRequest}>Fetch Data</button>
+
+      {/*
+      // Functionality Used in Development
+      <button onClick={handleRequest}>Fetch Data</button>*/}
 
       {airData?.data?.current?.weather ? (
         <div>
@@ -50,7 +55,6 @@ function Gauge() {
         // JSX when condition is false
         <p>Loading or no data available...</p>
       ) : null}
-
     </div>
 
   );

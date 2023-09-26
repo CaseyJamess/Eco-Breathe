@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { FaMapMarkerAlt } from 'react-icons/fa';
-import { sendLocationData } from "../services/airDataService";
+import { getAirQualityData } from "../services/airDataService";
 
 // Function Search() utilises the Mapbox API to suggest place names for the user - https://www.mapbox.com/
 // When a location is chosen, the function returns the co-ordinates of the location to be used to grab air quality data
@@ -12,7 +12,7 @@ function Search() {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [shouldFetch, setShouldFetch] = useState(true); // Flag to control API fetching
   const [selectedCoordinates, setSelectedCoordinates] = useState(null);
-  const [coordinates, setCoordinates] = useState(null ); 
+  const [coordinates, setCoordinates] = useState(null);
 
 
   // Fetch suggestions based on search term
@@ -73,29 +73,36 @@ function Search() {
   const handleSearch = (term) => {
     const searchValue = term || inputValue;
     console.log('Searching for:', inputValue);
-    console.log('The longitude is: ', selectedCoordinates[0], 'The latitude is: ', selectedCoordinates[1]);
+    console.log('The latitude is: ', selectedCoordinates[0], 'The latitude is: ', selectedCoordinates[1]);
     sendCoordinates(selectedCoordinates);
     setSuggestions([]);
     setShowSuggestions(false);
   };
 
   const getCurrentLocation = () => {
-
+    // to be finished
   }
 
   // send the desired location Coordinates to the server for use on the back end
   const sendCoordinates = async (coords) => {
 
-    if (!coords) throw new Error ("Coordinates are required");
+    if (!coords) throw new Error("Coordinates are required");
     try {
-      const longitude = coords[0];
-      const latitude = coords[1];
+      const longitude = parseFloat(coords[0].toFixed(4));    
+      const latitude = parseFloat(coords[1].toFixed(4));
+        
       console.log('sending coords to back end');
-      const response = await sendLocationData(longitude, latitude);
+      const response = await getAirQualityData(latitude, longitude);
+      formatResponse(response);
+
     }
     catch (error) {
-      console.log('error');
+      console.error('Error retrieving air quality data:', error);
     }
+  }
+
+  const formatResponse = (data) =>{
+    console.log('the response data is: ', data);
   }
 
   return (
