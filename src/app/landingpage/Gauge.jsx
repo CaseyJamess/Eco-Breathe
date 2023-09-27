@@ -1,62 +1,93 @@
+'use client'
+
 import React, { useState, useEffect } from "react";
 import GaugeChart from "react-gauge-chart";
 
 // // Functionality Used in Development
 //import { fetchData } from "../services/airDataService";
 
-function Gauge() {
-  const [airData, setAirData] = useState(null);
-  const [hasFetched, setHasFetched] = useState(false);
+function Gauge({ airData }) {
+
+  //destructuring airData
+  const {
+    city,
+    country,
+    current: {
+      weather: { ts } = {},
+      pollution: { aqius } = {},
+    } = {},
+  } = airData || {};
+
+  const formatDateAndTime = (timestamp) => {
+    const date = new Date(timestamp);
+
+    const options = {
+      weekday: 'long',  // This will show days like 'Monday', 'Tuesday', etc.
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false     // Use 24-hour format and omit AM or PM.
+    };
+    
+    return date.toLocaleString(undefined, options);
+  };
+
+  const formattedTs = formatDateAndTime(ts);
+
 
   useEffect(() => {
     // This will run every time airData changes
-    console.log("air data is:", airData);
+    console.log("the data in Gauge.js is: ", airData);
+    console.log("airData:", airData);
+    console.log("airData.data:", airData);
+    console.log("airData.data.current:", airData && airData.current);
+
   }, [airData]);
 
-  const handleRequest = async () => {
-    try {
-      console.log("About to fetch air data...");
-      const result = await fetchData();
-      console.log("Received data from API:", result);
-      setAirData(result);
-      setHasFetched(true);
+  const calculateAqiPercent = (aqiValue) => {
+    const maxAqi = 500;
+    return aqiValue ? ((aqiValue / maxAqi)) : 0;
+  }
 
-    } catch (error) {
-      console.log(error, "failed to return air quality data");
-    }
-  };
+  const aqiPercent = calculateAqiPercent(aqius);
+
   return (
-    <div className="w-10/12 lg:w-9/12">
+    <div className="w-11/12 lg:w-11/12 flex flex-col justify-between items-center">
       <GaugeChart
         id="gauge"
-        nrOfLevels={5}
-        colors={["#22c55e", "#facc15", "#f97316", "#dc2626", "#5b21b6"]} // Tailwind's green, yellow, orange, red, purple
-        percent={0}
+        nrOfLevels={6}
+        arcsLength={[0.1, 0.1, 0.1, 0.1, 0.2, 0.4]}
+        colors={["#22c55e", "#facc15", "#f97316", "#dc2626", "#6B21A8", "#881337"]}
+        percent={aqiPercent}
         arcWidth={0.3}
+        arcPadding={0.03}
         hideText={true}
       />
+      <div id="responseData" className="text-center flex flex-col justify-center items-center h-16"> {/* Adjust the h-value based on your needs */}
+        {airData && city && country ? (
+          <>
+            <h3>
+              <strong>
+                {city}, {country}
+              </strong>
+            </h3>
 
-      {/*
-      // Functionality Used in Development
-      <button onClick={handleRequest}>Fetch Data</button>*/}
+            {ts && aqius ? (
+              <>
+                <p>{formattedTs}</p>
+                <p>Air Quality Index: <strong>{aqius}</strong></p>
+              </>
+            ) : null}
+          </>
+        ) : (
+          <p className="text-gray-600 dark:text-gray-400">Awaiting Air Quality data...</p>
+        )}
+      </div>
 
-      {airData?.data?.current?.weather ? (
-        <div>
-          <h3>
-            Showing Air Quality for{" "}
-            <strong>
-              {airData.data.city}, {airData.data.country}
-            </strong>
-          </h3>
-          <p>Timestamp: {airData.data.current.weather.ts}</p>
-          <p>AQI (US EPA Standard): {airData.data.current.pollution.aqius}</p>
-        </div>
-      ) : hasFetched ? (
-        // JSX when condition is false
-        <p>Loading or no data available...</p>
-      ) : null}
+
     </div>
-
   );
 }
 

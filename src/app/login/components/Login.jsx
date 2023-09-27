@@ -24,7 +24,7 @@ function LoginComponent() {
 
     return (
         <form onSubmit={handleSubmit} className="space-y-4 bg-zinc-50 dark:bg-gray-800 p-8 rounded-xl">
-            <h1 className="xl:text-5xl text-3xl my-2">Welcome Back<span className='accent'>...</span></h1>
+            <h1 className="h1 my-2">Welcome Back<span className='accent'>...</span></h1>
             <div className="relative">
                 <FaEnvelope className="absolute text-gray-400 right-2 top-1/2 transform -translate-y-1/2" />
                 <label htmlFor="email" className="absolute text-xs font-medium px-2 top-2">

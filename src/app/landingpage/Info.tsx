@@ -27,30 +27,36 @@ const Info: React.FC = () => {
       color: "#5b21b6",
       name: "Purple",
       description:
-        "Very unhealthy; everyone may experience severe health effects. Stay indoors.",
+        "Very Unhealthy: Health alert; everyone may experience more serious health effects. Reduce outdoor activities.",
+    },
+    {
+      color: "#881337",
+      name: "Maroon",
+      description:
+        "Hazardous: Serious health warnings of emergency conditions. Entire population is more likely to be affected. Stay indoors and reduce exposure.",
     },
   ];
 
   return (
-    <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-20">
+    <div className="mt-0 md:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20">
       <div>
-        <h2 className="text-start accent text-xl font-semibold mb-4">
+        <h2 className="text-start accent text-lg xl:text-xl font-semibold mb-4">
           Understanding Air Quality with AirActive
         </h2>
-        <p className="mb-4">
-          The quality of the air we breathe profoundly impacts our health and
+        <p className="mb-4 p">
+          <strong>The quality of the air we breathe</strong> profoundly impacts our health and
           well-being. It's influenced by various pollutants, including nitrogen
           dioxide, sulfur dioxide, ozone, and particulate matter.
         </p>
-        <p className="mb-4">
-          Recognising the importance of air quality, AirActive has developed a
+        <p className="mb-4 p">
+          <strong>Recognising the importance of air quality</strong>, AirActive has developed a
           unique color-coded gauge providing a visual representation of air
           quality levels, with each color indicating a specific level. This
           user-friendly approach allows everyone to quickly assess the air's
           condition and take appropriate actions when necessary.
         </p>
-        <p className="mb-4">
-          For advanced features, including detailed analytics and
+        <p className="mb-4 p">
+          <strong>For advanced features</strong>, including detailed analytics and
           personalisation, sign up and join the AirActive community today.
         </p>
         <button className="button-style">
@@ -59,7 +65,7 @@ const Info: React.FC = () => {
       </div>
 
       <div className="">
-        <h3 className="text-xl accent font-semibold">Key</h3>
+        <h3 className="accent h3 font-semibold">Key</h3>
         {airQualityLevels.map((level) => (
           <div key={level.color} className="flex items-center my-4">
             <div className="relative w-10 h-10 flex-shrink-0 flex-grow-0 mr-4">

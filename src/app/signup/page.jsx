@@ -34,19 +34,19 @@ function page() {
     return (
         <div className="flex min-h-screen flex-col w-full items-center relative">
             <div className=" max-w-screen-xl mt-10 mx-2 px-2 xl:mx-auto">
-                <h3 className="text-2xl leading-normal accent xl:text-3xl">
+                <h2 className="h2 leading-normal accent">
                     Join For Free
-                </h3>
+                </h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-28 ">
 
                     {/* Left Col */}
                     <div className='lg:order-first order-last'>
 
-                        <h1 className="text-5xl mb-8 my-0 lg:my-8">
+                        <h1 className="h1 mb-8 my-0 lg:my-8">
                             Get started with AirActive<span className='accent'>.</span>
                         </h1>
                         {info.map((item) =>
-                            <ul className="list-disc list-inside ">
+                            <ul className="list-disc p list-inside ">
                                 <li className="mb-4"><strong className='accent text-lg'>{item.title}</strong>{item.info}</li>
                             </ul>
                         )}
@@ -56,8 +56,6 @@ function page() {
                         <SignUp />
                     </div>
                 </div>
-
-
             </div>
         </div>
     );

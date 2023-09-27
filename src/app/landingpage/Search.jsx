@@ -5,7 +5,7 @@ import { getAirQualityData } from "../services/airDataService";
 
 // Function Search() utilises the Mapbox API to suggest place names for the user - https://www.mapbox.com/
 // When a location is chosen, the function returns the co-ordinates of the location to be used to grab air quality data
-function Search() {
+function Search({ setAirQualityData }) {
   //  State variable declerations for the search input, suggestions, coordinates, etc.
   const [inputValue, setInputValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -22,7 +22,7 @@ function Search() {
     }
     try {
       const MAPBOX_API_KEY = process.env.NEXT_PUBLIC_MAPBOX_API_KEY;
-      const response = await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(searchTerm)}.json?access_token=${MAPBOX_API_KEY}&types=place,locality`);
+      const response = await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(searchTerm)}.json?access_token=${MAPBOX_API_KEY}&types=place`);
       const places = response.data.features;
 
       // Storing coordinates as an object
@@ -93,16 +93,14 @@ function Search() {
         
       console.log('sending coords to back end');
       const response = await getAirQualityData(latitude, longitude);
-      formatResponse(response);
-
+      setAirQualityData(response.data);
+     // console.log('setAirQualityData is : ', setAirQualityData);
+      
+     
     }
     catch (error) {
       console.error('Error retrieving air quality data:', error);
     }
-  }
-
-  const formatResponse = (data) =>{
-    console.log('the response data is: ', data);
   }
 
   return (
