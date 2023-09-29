@@ -65,10 +65,10 @@ function Gauge({ airData }) {
         arcPadding={0.03}
         hideText={true}
       />
-      <div id="responseData" className="text-center flex flex-col justify-center items-center h-16"> {/* Adjust the h-value based on your needs */}
+      <div id="responseData" className="text-center flex flex-col justify-center items-center h-20"> {/* Adjust the h-value based on your needs */}
         {airData && city && country ? (
           <>
-            <h3>
+            <h3 className="h3">
               <strong>
                 {city}, {country}
               </strong>
@@ -76,8 +76,8 @@ function Gauge({ airData }) {
 
             {ts && aqius ? (
               <>
-                <p>{formattedTs}</p>
-                <p>Air Quality Index: <strong>{aqius}</strong></p>
+                <p className="p">{formattedTs}</p>
+                <p className="p">Air Quality Index: <strong>{aqius}</strong></p>
               </>
             ) : null}
           </>

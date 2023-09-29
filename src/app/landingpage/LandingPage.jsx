@@ -2,18 +2,12 @@
 
 import React from "react";
 import Search from "./Search";
-import Gauge from "./Gauge";
+
+import AirQuality from "./AirQuality"
 import { useState, useEffect } from "react";
 import Info from "./Info";
 
 function LandingPage() {
-  const [hasSearched, setHasSearched] = useState(false);
-  const [airQualityData, setAirQualityData] = useState(null);
-
-  useEffect(() => {
-    console.log("Air Quality Data in LandingPage:", airQualityData);
-  }, [airQualityData]);
-
 
   return (
     <div className="flex shadow-md shadow-neutral-100 flex-col w-full items-center">
@@ -44,13 +38,11 @@ function LandingPage() {
           </div>
           {/* Right Col */}
           <div className="flex mt-8 md:mt-0 flex-col justify-center items-center">
-            <Gauge airData={airQualityData} />
-            <div className="justify-center mt-4 w-10/12">
-              <Search setAirQualityData={setAirQualityData} />
+            <div className="justify-center w-10/12">
+              <Search/>
             </div>
           </div>
         </div>
-
         <div className="my-20 w-full justify-center mx-auto">
           <Info />
         </div>

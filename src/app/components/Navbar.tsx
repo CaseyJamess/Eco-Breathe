@@ -24,8 +24,8 @@ const Navbar: React.FC = () => {
           <Image
             src="/Air-Active.svg"
             alt="Logo"
-            width={40}
-            height={40}
+            width={60}
+            height={60}
             className="mr-3"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">

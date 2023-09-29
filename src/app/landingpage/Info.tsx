@@ -39,7 +39,7 @@ const Info: React.FC = () => {
 
   return (
     <div className="mt-0 md:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20">
-      <div>
+      <div id="info">
         <h2 className="text-start accent text-lg xl:text-xl font-semibold mb-4">
           Understanding Air Quality with AirActive
         </h2>
@@ -64,7 +64,7 @@ const Info: React.FC = () => {
         </button>
       </div>
 
-      <div className="">
+      <div id ="key">
         <h3 className="accent h3 font-semibold">Key</h3>
         {airQualityLevels.map((level) => (
           <div key={level.color} className="flex items-center my-4">

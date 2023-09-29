@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import Gauge from "./Gauge";
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { getAirQualityData } from "../services/airDataService";
 
 // Function Search() utilises the Mapbox API to suggest place names for the user - https://www.mapbox.com/
 // When a location is chosen, the function returns the co-ordinates of the location to be used to grab air quality data
-function Search({ setAirQualityData }) {
+function Search() {
   //  State variable declerations for the search input, suggestions, coordinates, etc.
   const [inputValue, setInputValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -13,6 +14,9 @@ function Search({ setAirQualityData }) {
   const [shouldFetch, setShouldFetch] = useState(true); // Flag to control API fetching
   const [selectedCoordinates, setSelectedCoordinates] = useState(null);
   const [coordinates, setCoordinates] = useState(null);
+  const [feedbackMessage, setFeedbackMessage] = useState("");
+  const [airQualityData, setAirQualityData] = useState(null);
+
 
 
   // Fetch suggestions based on search term
@@ -47,6 +51,7 @@ function Search({ setAirQualityData }) {
   const handleInputChange = (e) => {
     const updatedValue = e.target.value.replace(/[^a-zA-Z\s]/g, '');
     setInputValue(updatedValue);
+    setFeedbackMessage("");
   }
 
   // Selecting a suggestion and logging its coordinates
@@ -55,6 +60,7 @@ function Search({ setAirQualityData }) {
     const coords = coordinates[suggestion];   // Fetch the coordinates of the selected suggestion
     setSelectedCoordinates(coords);
     console.log('Selected coordinates are', selectedCoordinates);  // Log the coordinates
+    setFeedbackMessage("");
     setShouldFetch(false);      // Stop fetching when a suggestion is selected
     setShowSuggestions(false);  // Hide the suggestion list
   };
@@ -79,14 +85,25 @@ function Search({ setAirQualityData }) {
     setShowSuggestions(false);
   };
 
+  const handleKeyDown = (e) => {
+
+    if (e.key === 'Enter'){
+      e.preventDefault(); 
+      if(!selectedCoordinates){
+        setFeedbackMessage("Please select a location from the drop down menu");
+      }
+    }
+
+  }
+
   const getCurrentLocation = () => {
     // to be finished
   }
 
   // send the desired location Coordinates to the server for use on the back end
   const sendCoordinates = async (coords) => {
-
     if (!coords) throw new Error("Coordinates are required");
+    setAirQualityData(null);
     try {
       const longitude = parseFloat(coords[0].toFixed(4));    
       const latitude = parseFloat(coords[1].toFixed(4));
@@ -94,9 +111,8 @@ function Search({ setAirQualityData }) {
       console.log('sending coords to back end');
       const response = await getAirQualityData(latitude, longitude);
       setAirQualityData(response.data);
+      setSelectedCoordinates(null);
      // console.log('setAirQualityData is : ', setAirQualityData);
-      
-     
     }
     catch (error) {
       console.error('Error retrieving air quality data:', error);
@@ -104,16 +120,14 @@ function Search({ setAirQualityData }) {
   }
 
   return (
-    <div >
-      <form
-        onSubmit={(e) => {
+    <div>
+      <Gauge airData={airQualityData} />
+      <form onSubmit={(e) => {
           e.preventDefault();
           handleSearch();
         }}>
-        <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
-          Search
-        </label>
-        <div className="relative">
+      
+        <div className=" mt-4 relative">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 ">
             <FaMapMarkerAlt className="z-20 w-5 h-5 hover:scale-110 duration-300 cursor-pointer text-gray-500 dark:text-gray-400" onClick={getCurrentLocation} />
           </div>
@@ -122,8 +136,10 @@ function Search({ setAirQualityData }) {
             id="default-search"
             className="block w-full text-xs p-4 pl-10 input"
             placeholder="Search for a City..."
+            autoComplete="off"
             value={inputValue}
             onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
             required
           />
           {showSuggestions && (
@@ -149,6 +165,9 @@ function Search({ setAirQualityData }) {
           </button>
         </div>
       </form>
+      <div className="mt-2">
+        {feedbackMessage && <p className="text-red-600 bg-white dark:text-red-500">{feedbackMessage}</p>}
+      </div>
     </div>
   );
 }
