@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import Gauge from "./Gauge";
@@ -7,7 +9,8 @@ import { getAirQualityData } from "../services/airDataService";
 // Function Search() utilises the Mapbox API to suggest place names for the user - https://www.mapbox.com/
 // When a location is chosen, the function returns the co-ordinates of the location to be used to grab air quality data
 function Search() {
-  //  State variable declerations for the search input, suggestions, coordinates, etc.
+
+  //  STATE VARIABLE DECLERATIONS for the search input, suggestions, coordinates, etc.
   const [inputValue, setInputValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -16,7 +19,7 @@ function Search() {
   const [coordinates, setCoordinates] = useState(null);
   const [feedbackMessage, setFeedbackMessage] = useState("");
   const [airQualityData, setAirQualityData] = useState(null);
-
+  const [errorMessage, setErrorMessage] = useState("");
 
 
   // Fetch suggestions based on search term
@@ -47,33 +50,13 @@ function Search() {
     }
   };
 
+  // EVENT HANDLERS
   // handles the change of the input field and doesn't allow for non letter submissions via regular expessions
   const handleInputChange = (e) => {
     const updatedValue = e.target.value.replace(/[^a-zA-Z\s]/g, '');
     setInputValue(updatedValue);
     setFeedbackMessage("");
   }
-
-  // Selecting a suggestion and logging its coordinates
-  const selectSuggestion = (suggestion) => {
-    setInputValue(suggestion);  // Update the input with the selected suggestion
-    const coords = coordinates[suggestion];   // Fetch the coordinates of the selected suggestion
-    setSelectedCoordinates(coords);
-    console.log('Selected coordinates are', selectedCoordinates);  // Log the coordinates
-    setFeedbackMessage("");
-    setShouldFetch(false);      // Stop fetching when a suggestion is selected
-    setShowSuggestions(false);  // Hide the suggestion list
-  };
-
-  // Run fetchSuggestions whenever inputValue changes (and if the term is long enough)
-  useEffect(() => {
-    if (inputValue.length > 2) {
-      fetchSuggestions(inputValue);
-    } else {
-      setShowSuggestions(false);
-    }
-    setShouldFetch(true);
-  }, [inputValue]);
 
   // The actual search handler
   const handleSearch = (term) => {
@@ -85,16 +68,25 @@ function Search() {
     setShowSuggestions(false);
   };
 
+  // Handling the enter key
   const handleKeyDown = (e) => {
-
-    if (e.key === 'Enter'){
-      e.preventDefault(); 
-      if(!selectedCoordinates){
+    if (e.key === 'Enter' && !selectedCoordinates) {
+      e.preventDefault();
         setFeedbackMessage("Please select a location from the drop down menu");
-      }
     }
-
   }
+
+  // UI RENDERING
+  // Selecting a suggestion and logging its coordinates
+  const selectSuggestion = (suggestion) => {
+    setInputValue(suggestion);  // Update the input with the selected suggestion
+    const coords = coordinates[suggestion];   // Fetch the coordinates of the selected suggestion
+    setSelectedCoordinates(coords);
+    console.log('Selected coordinates are', selectedCoordinates);  // Log the coordinates
+    setFeedbackMessage("");
+    setShouldFetch(false);      // Stop fetching when a suggestion is selected
+    setShowSuggestions(false);  // Hide the suggestion list
+  };
 
   const getCurrentLocation = () => {
     // to be finished
@@ -105,28 +97,40 @@ function Search() {
     if (!coords) throw new Error("Coordinates are required");
     setAirQualityData(null);
     try {
-      const longitude = parseFloat(coords[0].toFixed(4));    
+      const longitude = parseFloat(coords[0].toFixed(4));
       const latitude = parseFloat(coords[1].toFixed(4));
-        
       console.log('sending coords to back end');
       const response = await getAirQualityData(latitude, longitude);
       setAirQualityData(response.data);
       setSelectedCoordinates(null);
-     // console.log('setAirQualityData is : ', setAirQualityData);
+      // console.log('setAirQualityData is : ', setAirQualityData);
     }
     catch (error) {
       console.error('Error retrieving air quality data:', error);
     }
   }
 
+
+  // Run fetchSuggestions whenever inputValue changes (and if the term is long enough)
+  useEffect(() => {
+    if (inputValue.length > 1) {
+      fetchSuggestions(inputValue);
+    } else {
+      setShowSuggestions(false);
+    }
+    setShouldFetch(true);
+  }, [inputValue]);
+
+
+
   return (
     <div>
-      <Gauge airData={airQualityData} />
+      <Gauge airData={airQualityData} feedbackMessage={feedbackMessage} />
       <form onSubmit={(e) => {
-          e.preventDefault();
-          handleSearch();
-        }}>
-      
+        e.preventDefault();
+        handleSearch();
+      }}>
+
         <div className=" mt-4 relative">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 ">
             <FaMapMarkerAlt className="z-20 w-5 h-5 hover:scale-110 duration-300 cursor-pointer text-gray-500 dark:text-gray-400" onClick={getCurrentLocation} />
@@ -165,9 +169,6 @@ function Search() {
           </button>
         </div>
       </form>
-      <div className="mt-2">
-        {feedbackMessage && <p className="text-red-600 bg-white dark:text-red-500">{feedbackMessage}</p>}
-      </div>
     </div>
   );
 }

@@ -1,14 +1,10 @@
 'use client'
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import GaugeChart from "react-gauge-chart";
 
-// // Functionality Used in Development
-//import { fetchData } from "../services/airDataService";
+function Gauge({ airData, feedbackMessage }) {
 
-function Gauge({ airData }) {
-
-  //destructuring airData
   const {
     city,
     country,
@@ -20,40 +16,32 @@ function Gauge({ airData }) {
 
   const formatDateAndTime = (timestamp) => {
     const date = new Date(timestamp);
-
     const options = {
-      weekday: 'long',  // This will show days like 'Monday', 'Tuesday', etc.
+      weekday: 'long',
       year: 'numeric',
       month: 'short',
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit',
-      hour12: false     // Use 24-hour format and omit AM or PM.
+      hour12: false
     };
-    
     return date.toLocaleString(undefined, options);
   };
 
   const formattedTs = formatDateAndTime(ts);
 
-
   useEffect(() => {
-    // This will run every time airData changes
-    console.log("the data in Gauge.js is: ", airData);
-    console.log("airData:", airData);
-    console.log("airData.data:", airData);
-    console.log("airData.data.current:", airData && airData.current);
-
+    console.log("Updated airData in Gauge component:", airData);
   }, [airData]);
 
   const calculateAqiPercent = (aqiValue) => {
     const maxAqi = 500;
-    return aqiValue ? ((aqiValue / maxAqi)) : 0;
+    return aqiValue ? (aqiValue / maxAqi) : 0;
   }
 
   const aqiPercent = calculateAqiPercent(aqius);
 
-  return (
+    return (
     <div className="w-11/12 lg:w-11/12 flex flex-col justify-between items-center">
       <GaugeChart
         id="gauge"
@@ -65,28 +53,25 @@ function Gauge({ airData }) {
         arcPadding={0.03}
         hideText={true}
       />
-      <div id="responseData" className="text-center flex flex-col justify-center items-center h-20"> {/* Adjust the h-value based on your needs */}
-        {airData && city && country ? (
+      <div id="responseData" className="text-center flex flex-col justify-center items-center h-20">
+        {feedbackMessage ? (
+          <p className="text-red-600 p bg-white dark:text-red-500">{feedbackMessage}</p>
+        ) : airData && city && country ? (
           <>
             <h3 className="h3">
-              <strong>
-                {city}, {country}
-              </strong>
+              <strong>{city}, {country}</strong>
             </h3>
-
-            {ts && aqius ? (
+            {ts && aqius && (
               <>
                 <p className="p">{formattedTs}</p>
                 <p className="p">Air Quality Index: <strong>{aqius}</strong></p>
               </>
-            ) : null}
+            )}
           </>
         ) : (
-          <p className="text-gray-600 dark:text-gray-400">Awaiting Air Quality data...</p>
+          <p className="text-gray-600 p dark:text-gray-300">Awaiting Air Quality data...</p>
         )}
       </div>
-
-
     </div>
   );
 }

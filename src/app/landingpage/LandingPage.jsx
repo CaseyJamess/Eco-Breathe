@@ -1,10 +1,5 @@
-'use client'
-
 import React from "react";
 import Search from "./Search";
-
-import AirQuality from "./AirQuality"
-import { useState, useEffect } from "react";
 import Info from "./Info";
 
 function LandingPage() {
