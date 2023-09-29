@@ -42,7 +42,7 @@ function Gauge({ airData, feedbackMessage }) {
   const aqiPercent = calculateAqiPercent(aqius);
 
     return (
-    <div className="w-11/12 lg:w-11/12 flex flex-col justify-between items-center">
+    <div className=" lg:w-11/12 flex flex-col justify-between items-center">
       <GaugeChart
         id="gauge"
         nrOfLevels={6}

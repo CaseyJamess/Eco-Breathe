@@ -7,7 +7,7 @@ function LandingPage() {
   return (
     <div className="flex shadow-md shadow-neutral-100 flex-col w-full items-center">
       <div className="max-w-screen-xl mx-2 px-2 xl:mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-20 gap-10 mt-4 lg:mt-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-20 gap-6 mt-4 lg:mt-8 ">
           {/* Left Col */}
           <div>
 

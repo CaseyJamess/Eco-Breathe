@@ -6,7 +6,7 @@ import Image from "next/image";
 import DarkModeToggle from "./DarkModeToggle";
 import { FaBars } from "react-icons/fa";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },

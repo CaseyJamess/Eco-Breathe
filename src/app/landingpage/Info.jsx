@@ -1,6 +1,6 @@
 import React from "react";
 
-const Info: React.FC = () => {
+const Info = () => {
   const airQualityLevels = [
     {
       color: "#22c55e",
@@ -55,8 +55,8 @@ const Info: React.FC = () => {
               </svg>
             </div>
             <div className="flex-grow">
-              <span className="font-bold mr-2">{level.name}:</span>
-              <span>{level.description}</span>
+              <span className="font-bold p mr-2">{level.name}:</span>
+              <span className="p">{level.description}</span>
             </div>
           </div>
         ))}
