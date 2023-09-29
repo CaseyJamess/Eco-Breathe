@@ -12,7 +12,18 @@ export const metaInfo = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>{/* Fill with other Meta for SEO etc*/}</head>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* SEO Related Tags */}
+        <title>AirActive: Breathe Better, Live Healthier</title>
+        <meta name="description" content="Stay informed with real-time air quality updates for any location. Discover the best times to be outdoors and ensure a healthier lifestyle by monitoring the air you breathe." />
+        <meta name="keywords" content="Air Quality, Health, Breathe, ActiveAir, Outdoor Activities, Pollution, Clean Air" />
+
+          {/* Favicon */}
+    <link rel="icon" type="image/png" href="./Air-Active.svg" />
+    </head>
       <body>
         <Navbar />
         {children}
