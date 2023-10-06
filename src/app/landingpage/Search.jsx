@@ -91,7 +91,6 @@ function Search() {
   const getCurrentLocation = () => {
     // to be finished
   }
-
   // send the desired location Coordinates to the server for use on the back end
   const sendCoordinates = async (coords) => {
     if (!coords) throw new Error("Coordinates are required");
