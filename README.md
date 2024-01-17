@@ -13,7 +13,7 @@ Air Active seeks to empower individuals with actionable insights about air quali
 
 ## Latest Release
 
-Version 0.2.0 - 17-01/24
+Version 0.2.0 - 17/01/24
 
 Author: Casey Jamess
 
@@ -31,21 +31,16 @@ Author: Casey Jamess
 
 ### Languages: 
 
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+![Ruby](https://img.shields.io/badge/-Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
 
-![Ruby](https://img.shields.io/badge/-Ruby-CC342D?style=flat&logo=ruby&logoColor=white)
+![React (Next.js)](https://img.shields.io/badge/-React%20(Next.js)-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 
+![Rails](https://img.shields.io/badge/-Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
 
-### Frameworks: 
+![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Client-side:
-
-![React (Next.js)](https://img.shields.io/badge/-React%20(Next.js)-61DAFB?style=flat&logo=react&logoColor=white)
-
-
-Server-side:
-![Rails](https://img.shields.io/badge/-Rails-CC0000?style=flat&logo=ruby-on-rails&logoColor=white)
 
 
 APIs:
