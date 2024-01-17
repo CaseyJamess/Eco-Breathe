@@ -1,6 +1,8 @@
-# Air Active: Optimal Outdoor Timing Based on Air Quality 🌎💨🏃
+# Air Active - Real Time Air Quality Monitoring! 🌎💨🏃
 
-Welcome to Air Active — the front-end of a full-stack web application designed for the health-conscious and environmentally aware.
+Welcome to Air Active!
+
+This repo is the front-end of a full-stack web application designed for the health-conscious and environmentally aware.
 
 Leveraging real-time air quality data from across the globe, our application aids users in determining the ideal times to engage in outdoor activities, ensuring that you're breathing only the best whilst getting fit.
 
@@ -9,48 +11,49 @@ Leveraging real-time air quality data from across the globe, our application aid
 The deteriorating quality of air in various parts of the world has raised genuine health concerns.  
 Air Active seeks to empower individuals with actionable insights about air quality, enabling them to plan their outdoor workouts and activities at times when the air is at its best.  
 
-
-## Technologies 💻
+## Latest Release
 
 Version 0.2.0 - 17-01/24
 
 Author: Casey Jamess
 
-## 0.2 Updates
+  - Implemented a secure client-side API key, leveraging the Open Weather API, to provide users with real-time updates on Air Quality.
 
-- Utilised a safe client-side API key for instantaneous update of Air Quality to the User.
-- Made the codebase more modular with all AXIOS requests placed in the /services folder.
+  - Enhanced code maintainability by organizing all AXIOS requests into the /services folder, promoting a more modular codebase.
 
-
-## Features To Come
+## Features To Come - Feel free to suggest/add!
 
 - Personalized Recommendations: Based on your location and the current AQI, get suggestions on the best times for outdoor activities.
-- User Profiles: Save preferences, track activity patterns, add any comments, and get customized alerts.
-
+- User Profiles: Save preferences, track activity patterns, add any comments, and get customised alerts.
+- UI/UX Update
 
 ## Tech Stack
 
-### Languages: 
+### Languages: 
 
-![JavaScript](https://github.com/github/octicons/blob/main/svg/languages/javascript.svg) JavaScript
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-![Ruby](https://github.com/github/octicons/blob/main/svg/languages/ruby.svg) Ruby
+
+![Ruby](https://img.shields.io/badge/-Ruby-CC342D?style=flat&logo=ruby&logoColor=white)
 
 
 ### Frameworks: 
 
 Client-side:
 
-![React (Next.js)](https://github.com/github/octicons/blob/main/svg/languages/react.svg) Client-side React utilising Next.JS
+![React (Next.js)](https://img.shields.io/badge/-React%20(Next.js)-61DAFB?style=flat&logo=react&logoColor=white)
+
 
 Server-side:
-![Rails](https://github.com/github/octicons/blob/main/svg/languages/rails.svg) Server side - Rails API
+![Rails](https://img.shields.io/badge/-Rails-CC0000?style=flat&logo=ruby-on-rails&logoColor=white)
+
 
 APIs:
 
 - Mapbox API for Geolocating user input queries - [Mapbox Documentation](https://docs.mapbox.com/api/overview/)
-- IQ Air API for returning real-time air quality - [IQ Air API](https://www.iqair.com/)
-- ...
+
+- Incorporated client-side requests for the Air Quality API, enhancing the application's responsiveness by directly fetching and updating air quality data on the user's device - [OpenWeatherAPI] (https://api.openweathermap.org/data/2.5/)
+
 
 ## Features 🌟
 
@@ -66,6 +69,34 @@ Dark Mode:
 
 
 ## Getting Started 🚀
+
+Get API Keys:
+
+Before running the application, you'll need to obtain API keys for Mapbox and OpenWeather. Follow these steps:
+
+    Mapbox API Key:
+        Visit Mapbox and sign up for an account.
+        Create a new access token in your Mapbox account.
+        Copy the access token.
+
+    OpenWeather API Key:
+        Go to OpenWeatherMap and sign up for an account.
+        Obtain your API key from the OpenWeatherMap website.
+
+Configure API Keys:
+
+    Create a .env file in the root of the project.
+
+    Open the .env file and add the following lines:
+
+```bash
+NEXT_PUBLIC_MAPBOX_API_KEY = {your_mapbox_api_key}
+NEXT_PUBLIC_OPEN_AQ = {your_openweather_api_key}
+```
+
+Replace your_mapbox_api_key and your_openweather_api_key with your actual Mapbox and OpenWeather API keys.
+
+Note: Since the .env file is listed in the project's .gitignore, it won't be tracked by version control, ensuring that users can keep their API keys secure.
 
 **Clone the Repository:**
 
