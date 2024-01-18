@@ -41,7 +41,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-white dark:bg-gray-950 py-8">
+    <footer className="bg-component py-8">
       <div className="flex flex-col max-w-screen-xl mx-2 px-2 xl:mx-auto">
         {/*
         <div className="flex mb-10 items-center justify-start">
@@ -58,27 +58,26 @@ function Footer() {
 
         <div className="flex flex-col md:flex-row w-full ">
           {/* About AirActive Column */}
-          <div className="w-full  md:w-6/12 md:mx-10 items-start ">
-            <h5 className="h5 accent font-semibold mb-4">
-              Get Outside Today!
-            </h5>
+          <div className="w-full  md:w-4/12 md:mx-10 items-start ">
+            <h5 className="h5  mb-4">
+              Eco<span className="text-accent">Breathe</span>
+              </h5>
             <p className="text-base">
-              AirActive is a platform dedicated to raising awareness about the
+              EcoBreathe is a platform dedicated to raising awareness about the
               importance of air quality, its effects on health, and the
-              significance of regular exercise. Our mission is to promote a
-              healthy lifestyle in clean environments.
+              significance of regular exercise.
             </p>
           </div>
           {/* Nav links Column */}
-          <div className=" md:w-3/12 mt-4 md:mt-0 items-start ">
-            <h5 className="h5 font-semibold accent mb-4">
+          <div className=" md:w-4/12 mt-4 md:mt-0 items-start ">
+            <h5 className="h5  text-accent mb-4">
               Quick Links
             </h5>
             {pageLinks.map((item, index) => (
               <a
                 key={index}
                 href={item.path}
-                className="block hover:text-blue-500  duration-300 text-base mb-2"
+                className="block hover:text-accent  duration-300 text-base mb-2"
               >
                 {item.name}
               </a>
@@ -86,7 +85,7 @@ function Footer() {
           </div>
           {/* Information Links Column */}
           <div className="md:w-3/12 mt-4 md:mt-0  items-start ">
-            <h5 className="h5 font-semibold accent mb-4">
+            <h5 className="h5 text-accent mb-4">
               Information
             </h5>
             {informationLinks.map((link, index) => (
@@ -95,7 +94,7 @@ function Footer() {
                 href={link.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block hover:text-blue-500 duration-300 text-base mb-2"
+                className="block hover:text-accent duration-300 text-base mb-2"
               >
                 {link.text}
               </a>
@@ -108,7 +107,7 @@ function Footer() {
                   href={item.path}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block mr-4 mt-2 hover:text-blue-500 duration-300 text-xl mb-2"
+                  className="block mr-4 mt-2 hover:text-accent duration-300 text-xl mb-2"
                 >
                   {item.icon || item.text}
                 </a>
@@ -118,7 +117,7 @@ function Footer() {
         </div>
 
         <p className="mt-10  text-center">
-          &copy; {new Date().getFullYear()} AirActive. All rights reserved.
+          &copy; {new Date().getFullYear()} Eco<span className="text-accent">Breathe</span>. All rights reserved.
         </p>
       </div>
     </footer>

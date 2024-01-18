@@ -40,8 +40,8 @@ const Info = () => {
   return (
     <div className="mt-0 md:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20">
       {/* Key Section */}
-      <div id="key" className="order-first lg:order-last">
-        <h3 className="accent h3 font-semibold">Key</h3>
+      <article id="key" className="order-first bg-component p-4 lg:p-8 rounded-xl lg:order-last">
+        <h3 className="text-white h3 font-semibold">Key</h3>
         {airQualityLevels.map((level) => (
           <div key={level.color} className="flex items-center my-4">
             <div className="relative w-10 h-10 flex-shrink-0 flex-grow-0 mr-4">
@@ -60,11 +60,11 @@ const Info = () => {
             </div>
           </div>
         ))}
-      </div>
+      </article>
       
       {/* Info Section */}
-      <div id="info">
-        <h2 className="text-start accent text-lg xl:text-xl font-semibold mb-4">
+      <article className ="bg-component p-4 lg:p-16 rounded-xl" id="info">
+        <h2 className="text-start h2 mb-4">
           Understanding Air Quality with AirActive
         </h2>
         <p className="mb-4 p">
@@ -86,7 +86,7 @@ const Info = () => {
         <button className="button-style">
           Sign Up
         </button>
-      </div>
+      </article>
     </div>
   );
   

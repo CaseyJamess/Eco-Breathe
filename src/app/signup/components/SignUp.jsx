@@ -30,11 +30,8 @@ function SignUp() {
   });
 
   return (
-    <div className='w-full'>
-      <div className="text-lg w-full">
-        <form onSubmit={formik.handleSubmit} className="space-y-4 p-10 bg-neutral-50 dark:bg-gray-800 rounded-xl mt-6">
+        <form onSubmit={formik.handleSubmit} className="component space-y-4">
           <h3 className="text-5xl mt-2">Sign up today<span className='accent'>!</span></h3>
-          
           {/* Username */}
           <div className="relative mt-2">
             <BsFillPersonVcardFill className="absolute text-gray-400 right-2 top-1/2 transform -translate-y-1/2" />
@@ -123,8 +120,8 @@ function SignUp() {
             <button type="submit" className="w-full button-style">Sign Up</button>
           </div>
         </form>
-      </div>
-    </div>
+   
+
   );
 }
 

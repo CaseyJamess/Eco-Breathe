@@ -3,12 +3,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import DarkModeToggle from "./DarkModeToggle";
+// import DarkModeToggle from "./DarkModeToggle";
 import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   const menuItems = [
-    { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "FAQs", path: "/FAQs" },
     { name: "Login", path: "/login" },
@@ -18,20 +17,17 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-slate-50   dark:bg-gray-950">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <div className="flex items-center">
+    <nav className=" w-full border-b  bg-component border-component">
+      <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="/" className="flex items-center hover:cursor-pointer duration-300 hover:scale-105">
           <Image
-            src="/Air-Active.svg"
+            src="/Air-Aware.svg"
             alt="Logo"
             width={60}
             height={60}
-            className="mr-3"
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            AirActive
-          </span>
-        </div>
+         <span className="h2 ml-2">EcoBreathe</span>
+        </a>
 
         {/* Toggle button for mobile */}
         <button
@@ -52,12 +48,12 @@ const Navbar = () => {
           } w-full flex-row md:flex md:items-center md:justify-between md:w-auto`}
           id="navbar-default"
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg dark:bg-gray-800 md:dark:bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0   ">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
             {menuItems.map((item, index) => (
               <li key={index}>
                 <Link href={item.path}>
                   <span
-                    className={`block duration-300 py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent 
+                    className={`block duration-300 py-2 pl-3 pr-4 rounded  md:hover:bg-transparent md:border-0 md:hover:text-accent md:p-0  
                     }
             `}
                   >
@@ -67,9 +63,8 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="ml-10 hidden md:flex md:mt-0">
-            <DarkModeToggle />
-          </div>
+  
+          
         </div>
       </div>
     </nav>

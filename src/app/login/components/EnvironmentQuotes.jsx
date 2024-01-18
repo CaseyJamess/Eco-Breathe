@@ -64,13 +64,13 @@ function EnvironmentQuotes() {
     
   
     return (
-      <div className='mt-4 md:mt-20 min-h-[150px]'> {/* Added min-h-[300px] */}
+      <div className='mt-auto'>
         <blockquote className={`transition-all ease-in-out duration-1000 ${show ? 'opacity-100' : 'opacity-1'}`}>
           <p className='text-xl xl:text-3xl'>
-            {quotes[currentQuoteIndex].body}
+           "{quotes[currentQuoteIndex].body}
             {' '}
-            <span className="accent">
-              {quotes[currentQuoteIndex].detail}
+            <span className="">
+              {quotes[currentQuoteIndex].detail}"
             </span>
           </p>
         </blockquote>
