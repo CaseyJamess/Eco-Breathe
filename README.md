@@ -1,6 +1,6 @@
-# Air Active - Real Time Air Quality Monitoring! 🌎💨🏃
+# EcoBreathe - Real Time Air Quality Monitoring! 🌎💨🏃
 
-Welcome to Air Active!
+Welcome to EcoBreathe!
 
 This repo is the front-end of a full-stack web application designed for the health-conscious and environmentally aware.
 
@@ -19,7 +19,7 @@ Author: Casey Jamess
 
 ### Working On
 
-- Dynamically display the Air Quality Data on Screen
+- Implementing dynamic display of Air Quality Data on the screen
 
 ### Additions
 
@@ -51,7 +51,7 @@ Author: Casey Jamess
 
 The client side is a React App utilising the Next.JS framework, with the server-side leveraging the power of Ruby on Rails' API.
 
-Air Active is styled with Tailwind to aid in rapid app development
+EcoBreathe is styled with Tailwind to aid in rapid app development
 
 APIs:
 
