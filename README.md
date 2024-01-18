@@ -13,19 +13,34 @@ Air Active seeks to empower individuals with actionable insights about air quali
 
 ## Latest Release
 
-Version 0.2.0 - 17/01/24
+Version 0.2.1 - 18/01/24
 
 Author: Casey Jamess
 
-  - Implemented a secure client-side API key, leveraging the Open Weather API, to provide users with real-time updates on Air Quality.
+### Working On
 
-  - Enhanced code maintainability by organizing all AXIOS requests into the /services folder, promoting a more modular codebase.
+- Dynamically display the Air Quality Data on Screen
+
+### Additions
+
+- Implemented a secure client-side API key, leveraging the Open Weather API, to provide users with real-time updates on Air Quality.
+
+- Enhanced code maintainability by organizing all AXIOS requests into the /services folder, promoting a more modular codebase.
+
+- Further enhanced code maintainability by separating pages with components
+
+- Added Debounce to search function
+
+### Bugs to address
+
+- Ensure that the drop-down suggestions disappear when the input is empty.
 
 ## Features To Come - Feel free to suggest/add!
 
 - Personalized Recommendations: Based on your location and the current AQI, get suggestions on the best times for outdoor activities.
 - User Profiles: Save preferences, track activity patterns, add any comments, and get customised alerts.
 - UI/UX Update
+
 
 ## Tech Stack
 
@@ -48,14 +63,6 @@ APIs:
 ## Features 🌟
 
 Global Air Quality Index (AQI) Dashboard: Access real-time air quality metrics from cities around the world.
-
-This is the V0.2.0 UI & Landing Page layout in light mode:  
-
-![Light Mode](https://user-images.githubusercontent.com/19407258/266426752-0bd244e3-4a0e-456d-bd34-2d0ee0c00446.png)
-
-Dark Mode:
-
-![Light Mode](https://user-images.githubusercontent.com/19407258/266426769-5a289324-5033-43ce-a845-30704c815b8d.png)
 
 
 ## Getting Started 🚀
