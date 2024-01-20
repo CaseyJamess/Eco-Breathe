@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import GaugeChart from "react-gauge-chart";
 
 function Gauge({ airQualityData, locationDisplayName }) {
+ // console.log("dataa", airQualityData);
+  // console.log("name", locationDisplayName);
 
 
-console.log("dataa", airQualityData);
 
-console.log("dataa", locationDisplayName);
 
-  const { city, country } = locationDisplayName || {};
   /* const formatDateAndTime = (airQualityData.dt) => {
     const date = new Date(timestamp);
     const options = {
@@ -27,7 +26,7 @@ console.log("dataa", locationDisplayName);
 
   */
   //const formattedTs = formatDateAndTime(ts);
-
+  // console.log("city", city);
 
   return (
     <div className="flex flex-col">
@@ -47,18 +46,16 @@ console.log("dataa", locationDisplayName);
         <div className="my-4 rounded-xl p-4 md:p-8">
           <h3 className="h3 text-black"></h3>
           <div className="flex flex-col md:flex-row">
-            {/* Display information from the passed onHandleLocationName prop */}
+
+          {locationDisplayName &&(
+              <div className="flex flex-col lg:flex-row flex-wrap">
+                <p className="p">Showing Results For:</p>
+                <p className="md:ml-2 text-accent p">{locationDisplayName}</p>
+              </div>
+            )}
             <div className="">
-              <p className="mr-2 text-black">City: {}</p>
+              <p className="mr-2 ">{}</p>
             </div>
-            <div className="">
-              <p className="mr-2 text-black">Country: {}</p>
-            </div>
-            {/* Access components properties as needed */}
-            <div className="">
-              <p className="mr-2 text-black">Component Value: {}</p>
-            </div>
-            {/* Display other properties like aqi and formattedDateTime */}
           </div>
         </div>
       </div>

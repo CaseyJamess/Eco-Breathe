@@ -8,8 +8,12 @@ import { getAirQuality } from "../../services/getAirQuality";
 import SearchButton from "./search/SearchButton";
 import debounce from "lodash/debounce";
 
-const Search = ({ onAirQualityData, onLocationName }) => {
-  
+const Search = ({
+  onAirQualityData,
+  onLocationName,
+
+}) => {
+
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -19,9 +23,7 @@ const Search = ({ onAirQualityData, onLocationName }) => {
   const [airQualityData, setAirQualityData] = useState(null);
 
   const debouncedFunction = useCallback(
-    debounce((value) => {
-      console.log(value);
-    }, 700),
+    debounce(() => {}, 700),
     []
   );
 
@@ -40,20 +42,20 @@ const Search = ({ onAirQualityData, onLocationName }) => {
       const formattedCoords = formatCoordinates(locationCoordinates);
       setSelectedCoordinates(formattedCoords);
       setInputValue(location);
-      onLocationName(location);
       setShouldFetch(false);
       setShowSuggestions(false);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      onLocationName(inputValue);
       const response = await getAirQuality(selectedCoordinates);
       processResponseData(response);
-      console.log(onLocationName);
+      setInputValue("");
       setShowSuggestions(false);
     } catch (error) {
       console.error("Error fetching air quality data:", error);
@@ -68,6 +70,7 @@ const Search = ({ onAirQualityData, onLocationName }) => {
     onAirQualityData(data);
   };
 
+
   useEffect(() => {
     if (inputValue !== "" && shouldFetch) {
       const fetchData = async () => {
@@ -77,7 +80,7 @@ const Search = ({ onAirQualityData, onLocationName }) => {
           setSuggestions(suggestions);
           setCoordinates(locationCoordinates);
         } catch (error) {
-          console.log(error);
+          console.error(error);
         }
       };
       fetchData();
