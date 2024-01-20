@@ -29,12 +29,11 @@ function LandingPage() {
         />
       
       </div>
-      <section className="md:-mt-6 md:p-6 lg:-mt-8 lg:p-8">
+      <section className="mt-2 md:-mt-8 md:p-6 lg:-mt-10 lg:p-8">
         <Gauge
           airQualityData={airQualityData}
           locationDisplayName={locationName}
         />
-    
       </section>
     </div>
   );

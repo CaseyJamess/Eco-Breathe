@@ -8,7 +8,7 @@ function About() {
 
   return (
     <div>
-      <header className="md:py-10">
+      <header className=" mx-2 px-2 md:py-10">
         <h1 className="h1 ">
           About Eco<span className="text-accent">Breathe</span>
         </h1>
@@ -112,6 +112,7 @@ function About() {
             from 1 (good) to 5 (hazardous). It's important to mention that
             different countries and organizations may use their own metrics to
             determine the Air Quality Index.
+            </p>
             <p className="mt-8"> Learn more here:
             <a
               href="https://openweathermap.org/air-pollution-index-levels"
@@ -120,9 +121,6 @@ function About() {
               OpenWeatherMap Air Pollution Index Levels.
             </a>
             </p>
-          </p>
-
-  
         </div>
       </section>
     </div>

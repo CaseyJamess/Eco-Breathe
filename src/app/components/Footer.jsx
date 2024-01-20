@@ -57,7 +57,7 @@ function Footer() {
   */}
         <div className="flex flex-col md:flex-row w-full ">
           {/* About AirActive Column */}
-          <div className="w-full  md:w-4/12 md:mx-10 items-start ">
+          <div className="w-full md:w-4/12 md:mx-10 items-start ">
             <h5 className="h5  mb-4">
               Eco<span className="text-accent">Breathe</span>
               </h5>

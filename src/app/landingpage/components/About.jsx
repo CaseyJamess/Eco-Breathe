@@ -16,7 +16,7 @@ const About = () => {
           hourly updates.
         </p>
         <a href ="/about">
-        <button className="button-style mt-8">Learn More</button>
+        <button className="button-style mt-4 xl:mt-8">Learn More</button>
         </a>
     </>
   );

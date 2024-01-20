@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 const FAQs = () => {
 
+  const hi = "You can sign up for free by clicking the Sign Up button on the top-right corner of the homepage. Follow the instructions to create your account";
   const questions = [
     {
       id: 0,
@@ -17,7 +18,7 @@ const FAQs = () => {
       id: 1,
       question: "How do I sign up?",
       answer:
-        'You can sign up for free by clicking the "Sign Up" button on the top-right corner of the homepage. Follow the instructions to create your account.',
+        'Sign up option coming soon...',
     },
     {
       id: 2,
@@ -35,7 +36,7 @@ const FAQs = () => {
       id: 4,
       question: "How accurate is the data?",
       answer:
-        "EcoBreathe relies on high-quality sensors and data sources to provide accurate and up-to-date air quality information.",
+        "EcoBreathe relies on high-quality sensors and data sources from Open Weather to provide accurate and up-to-date air quality information.",
     },
   ];
 

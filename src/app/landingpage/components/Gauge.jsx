@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import GaugeChart from "react-gauge-chart";
 import timestamp from "time-stamp";
 
 function Gauge({ airQualityData, locationDisplayName }) {
   const { aqi, components, dateTime } = airQualityData;
   const time = timestamp("HH:mm", new Date(dateTime * 1000));
-
   console.log("components,", components);
 
   /*
@@ -34,17 +33,17 @@ dateTime: 1705759973
         nrOfLevels={5}
         colors={["#22c55e", "#facc15", "#f97316", "#dc2626", "#6B21A8"]}
         percent={aqiPercent}
-        arcWidth={0.10}
-        arcPadding={0.02}
+        arcWidth={0.12}
+        arcPadding={0.01}
         hideText={true}
       />
       <div
         id="responseData"
-        className="text-center flex flex-col justify-center items-center h-20"
+        className="text-center flex flex-col justify-center items-center "
       >
         <div className="flex flex-col ">
           {locationDisplayName && (
-            <div className="flex flex-col mt-16 flex-wrap">
+            <div className="flex flex-col mt-4 flex-wrap">
               <p className="p">Showing Results For:</p>
               <p className=" text-accent p">
                 {locationDisplayName}{" "}
@@ -54,9 +53,9 @@ dateTime: 1705759973
           )}
           <div className="rounded-xl mt-4">
             {airQualityData && (
-              <div className="flex flex-row text-sm md:text-base">
+              <div className="flex flex-row text-sm lg:text-base">
                 {Object.keys(components).map((key) => (
-                  <p key={key}>
+                  <p className="mr-2"key={key}>
                     {key}: {components[key]}
                   </p>
                 ))}

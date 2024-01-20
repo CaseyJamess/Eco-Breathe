@@ -53,12 +53,12 @@ function LoginComponent() {
                     onChange={handleChange}
                 />
             </div>
-            <div className="mt-4 text-base items-end  text-start">
-                <span className=" hover:underline duration-500 cursor-pointer">Forgot Password?</span>
+            <div className="mt-4 text-base items-end text-start">
+                <span className=" hover:underline text-accent hover:opacity-80 duration-300 cursor-pointer">Forgot Password?</span>
             </div>
             <div>
                 <div className='mt-4 text-base items-end text-start'>
-                    Don't Have An Account? <span className=' hover:underline duration-500 cursor-pointer'>Sign Up</span>
+                    Don't Have An Account? <span className=' hover:underline text-accent hover:opacity-80 duration-300 cursor-pointer'>Sign Up</span>
                 </div>
                 <button
                     className="button-style mt-6 w-full"

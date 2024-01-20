@@ -5,7 +5,8 @@
 @layer base {
   body {
     font-family: "Archivo", sans-serif;
-   
+    min-width: 0;
+   @apply mx-2 px-2 ;
   }
 
   ::selection {
@@ -13,21 +14,17 @@
 }
 
   main {
-    @apply max-w-screen-xl xl:mx-auto mx-2 px-2 my-4 lg:my-8 flex flex-col;
+    @apply max-w-screen-xl xl:mx-auto my-4 lg:my-8 flex flex-col;
   }
 }
 
 @layer components {
   .button-style {
-    @apply bg-accent hover:bg-opacity-70 rounded-md md:text-lg text-sm text-center duration-300 text-white py-2 px-4;
-  }
-
-  .button-style2 {
-    @apply bg-transparent hover:bg-blue-800 border border-blue-700 hover:border-transparent text-blue-700 rounded-md md:text-lg text-sm text-center duration-300 hover:text-white py-2 px-4;
+    @apply bg-accent hover:bg-opacity-70 rounded-md xl:text-lg text-sm text-center duration-300 text-white py-2 px-4;
   }
 
   .component {
-    @apply bg-component border-component border rounded-xl p-4 lg:p-8;
+    @apply bg-component border-component border rounded-lg p-4 lg:p-8;
   }
 
   .grid-layout {
@@ -46,11 +43,11 @@
 
 @layer utilities {
   .h1 {
-    @apply text-3xl lg:text-6xl tracking-tighter;
+    @apply text-3xl xl:text-6xl tracking-tighter;
   }
 
   .h2 {
-    @apply text-2xl lg:text-4xl tracking-tight;
+    @apply text-2xl xl:text-4xl tracking-tight;
   }
 
   .h3 {

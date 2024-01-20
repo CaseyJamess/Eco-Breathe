@@ -115,7 +115,7 @@ function SignUp() {
 
           <div>
             <div className='my-6 text-base items-end text-end'>
-              Already a member? <span className='text-blue-500 hover:text-blue-600 duration-500 cursor-pointer'>Sign In</span>
+              Already a member? <span className='text-accent hover:underline hover:opacity-80 duration-300 cursor-pointer'>Sign In</span>
             </div>
             <button type="submit" className="w-full button-style">Sign Up</button>
           </div>
