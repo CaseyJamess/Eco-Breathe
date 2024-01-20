@@ -17,14 +17,16 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className=" w-full border-b  bg-component border-component">
-      <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className=" w-full border-b bg-component border-component">
+      <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 px-4 md:p-4">
         <a
           href="/"
           className="flex items-center hover:cursor-pointer duration-300 hover:scale-105"
         >
-          <Image src="/Air-Aware.svg" alt="Logo" width={60} height={60} />
-          <span className="h2 ml-2">EcoBreathe</span>
+          <Image src="/EcoBreathe.svg" alt="Logo" width={40} height={40} />
+          <span className="h3 hidden md:flex ml-2">
+            Eco<span className="text-accent">Breathe</span>
+          </span>
         </a>
 
         {/* Toggle button for mobile */}

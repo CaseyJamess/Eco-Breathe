@@ -9,7 +9,6 @@ export const getLocation = async (searchTerm) => {
     const locationCoordinates = places.map((place) => place.geometry.coordinates);
     const suggestions = places.map((place) => place.place_name);
     return { suggestions, locationCoordinates };
-
   } catch (error) {
     console.error('Error fetching data:', error);
     throw error;

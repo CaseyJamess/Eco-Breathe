@@ -8,12 +8,7 @@ import { getAirQuality } from "../../services/getAirQuality";
 import SearchButton from "./search/SearchButton";
 import debounce from "lodash/debounce";
 
-const Search = ({
-  onAirQualityData,
-  onLocationName,
-
-}) => {
-
+const Search = ({ onAirQualityData, onLocationName }) => {
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -70,7 +65,6 @@ const Search = ({
     onAirQualityData(data);
   };
 
-
   useEffect(() => {
     if (inputValue !== "" && shouldFetch) {
       const fetchData = async () => {
@@ -90,7 +84,7 @@ const Search = ({
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="relative">
+        <div className="relative w-9/12 lg:w-2/3 mt-8">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 ">
             <FaMapMarkerAlt className="z-20 w-5 h-5 hover:scale-110 duration-300 cursor-pointer text-gray-500 dark:text-gray-400" />
           </div>

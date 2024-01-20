@@ -4,8 +4,7 @@ import React, { useState, useEffect } from "react";
 import Search from "./components/Search";
 import About from "./components/About";
 import Gauge from "./components/Gauge";
-import { MdOutlineAir } from "react-icons/md";
-import { WiDust } from "react-icons/wi";
+import Key from "./components/Key";
 
 function LandingPage() {
   const [airQualityData, setAirQualityData] = useState("");
@@ -22,20 +21,20 @@ function LandingPage() {
 
   return (
     <div className="grid-layout min-h-dvh sm:min-h-full md:p-10">
-      {/* left col*/}
-
       <div className="">
         <About />
-      </div>
-      <section className="mt-8 md:-mt-6 md:p-6 lg:-mt-8 lg:p-8">
-        <Gauge
-          airQualityData={airQualityData}
-          locationDisplayName={locationName}
-        />
         <Search
           onAirQualityData={handleAirQualityData}
           onLocationName={handleLocationName}
         />
+      
+      </div>
+      <section className="md:-mt-6 md:p-6 lg:-mt-8 lg:p-8">
+        <Gauge
+          airQualityData={airQualityData}
+          locationDisplayName={locationName}
+        />
+    
       </section>
     </div>
   );

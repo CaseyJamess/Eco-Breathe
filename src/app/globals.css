@@ -5,8 +5,12 @@
 @layer base {
   body {
     font-family: "Archivo", sans-serif;
+   
   }
 
+  ::selection {
+    @apply bg-accent text-white;
+}
 
   main {
     @apply max-w-screen-xl xl:mx-auto mx-2 px-2 my-4 lg:my-8 flex flex-col;
@@ -42,18 +46,18 @@
 
 @layer utilities {
   .h1 {
-    @apply text-3xl xl:text-6xl tracking-tighter;
+    @apply text-3xl lg:text-6xl tracking-tighter;
   }
 
   .h2 {
-    @apply text-2xl xl:text-4xl tracking-tight;
+    @apply text-2xl lg:text-4xl tracking-tight;
   }
 
   .h3 {
-    @apply text-lg xl:text-xl tracking-tight;
+    @apply text-xl xl:text-3xl tracking-tight;
   }
 
   .p {
-    @apply text-base xl:text-lg;
+    @apply text-base xl:text-xl;
   }
 }

@@ -2,60 +2,66 @@
 
 import React, { useState, useEffect } from "react";
 import GaugeChart from "react-gauge-chart";
+import timestamp from "time-stamp";
 
 function Gauge({ airQualityData, locationDisplayName }) {
- // console.log("dataa", airQualityData);
-  // console.log("name", locationDisplayName);
+  const { aqi, components, dateTime } = airQualityData;
+  const time = timestamp("HH:mm", new Date(dateTime * 1000));
 
+  console.log("components,", components);
 
+  /*
 
+airQualityData returns: 
 
-  /* const formatDateAndTime = (airQualityData.dt) => {
-    const date = new Date(timestamp);
-    const options = {
-      weekday: "long",
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: false,
-    };
-    return date.toLocaleString(undefined, options);
+aqi: 5
+components: Object { co: 5233.77, no: 50.96, no2: 128.87, … }
+dateTime: 1705759973
+*/
+
+  const calculateAqiPercent = (aqiValue) => {
+    const maxAqi = 5;
+    // -0.1 to get the Gauge Needle in the middle
+    return aqiValue ? aqiValue / maxAqi - 0.1 : 0;
   };
 
-  */
-  //const formattedTs = formatDateAndTime(ts);
-  // console.log("city", city);
+  const aqiPercent = calculateAqiPercent(aqi);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex mb-4 flex-col">
       <GaugeChart
         id="gauge"
         nrOfLevels={5}
         colors={["#22c55e", "#facc15", "#f97316", "#dc2626", "#6B21A8"]}
-        percent={0}
-        arcWidth={0.12}
-        arcPadding={0.03}
+        percent={aqiPercent}
+        arcWidth={0.10}
+        arcPadding={0.02}
         hideText={true}
       />
       <div
         id="responseData"
         className="text-center flex flex-col justify-center items-center h-20"
       >
-        <div className="my-4 rounded-xl p-4 md:p-8">
-          <h3 className="h3 text-black"></h3>
-          <div className="flex flex-col md:flex-row">
-
-          {locationDisplayName &&(
-              <div className="flex flex-col lg:flex-row flex-wrap">
-                <p className="p">Showing Results For:</p>
-                <p className="md:ml-2 text-accent p">{locationDisplayName}</p>
+        <div className="flex flex-col ">
+          {locationDisplayName && (
+            <div className="flex flex-col mt-16 flex-wrap">
+              <p className="p">Showing Results For:</p>
+              <p className=" text-accent p">
+                {locationDisplayName}{" "}
+                <span className="text-white">at {time}</span>
+              </p>
+            </div>
+          )}
+          <div className="rounded-xl mt-4">
+            {airQualityData && (
+              <div className="flex flex-row text-sm md:text-base">
+                {Object.keys(components).map((key) => (
+                  <p key={key}>
+                    {key}: {components[key]}
+                  </p>
+                ))}
               </div>
             )}
-            <div className="">
-              <p className="mr-2 ">{}</p>
-            </div>
           </div>
         </div>
       </div>

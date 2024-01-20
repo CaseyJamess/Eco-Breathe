@@ -1,25 +1,25 @@
-# EcoBreathe - Real Time Air Quality Monitoring! 🌎💨🏃
+# EcoBreathe - Real Time Air Quality Monitoring! 🌎
 
 Welcome to EcoBreathe!
 
 This repo is the front-end of a full-stack web application designed for the health-conscious and environmentally aware.
 
-Leveraging real-time air quality data from across the globe, our application aids users in determining the ideal times to engage in outdoor activities, ensuring that you're breathing only the best whilst getting fit.
+Leveraging real-time air quality data from across the globe, EcoBreathe aids users in determining the ideal times to engage in outdoor activities, ensuring that you're breathing only the best whilst getting fit.
 
 ## Overview 🌐
 
 The deteriorating quality of air in various parts of the world has raised genuine health concerns.  
-Air Active seeks to empower individuals with actionable insights about air quality, enabling them to plan their outdoor workouts and activities at times when the air is at its best.  
+EcoBreathe seeks to empower individuals with actionable insights about air quality, a
 
 ## Latest Release
 
-Version 0.2.1 - 18/01/24
+Version 0.2.3 - 20/01/24
 
 Author: Casey Jamess
 
 ### Working On
 
-- Implementing dynamic display of Air Quality Data on the screen
+- UI/UX updates,
 
 ### Additions
 
@@ -46,7 +46,8 @@ Author: Casey Jamess
 
 ### Languages: 
 
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![Ruby](https://img.shields.io/badge/-Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)![React (Next.js)](https://img.shields.io/badge/-React%20(Next.js)-61DAFB?style=for-the-badge&logo=react&logoColor=white)![Rails](https://img.shields.io/badge/-Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![React (Next.js)](https://img.shields.io/badge/-React%20(Next.js)-61DAFB?style=for-the-badge&logo=react&logoColor=white)![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Ruby](https://img.shields.io/badge/-Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)![Rails](https://img.shields.io/badge/-Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
 
 
 The client side is a React App utilising the Next.JS framework, with the server-side leveraging the power of Ruby on Rails' API.
@@ -59,11 +60,9 @@ APIs:
 
 - Incorporated client-side requests for the Air Quality API, enhancing the application's responsiveness by directly fetching and updating air quality data on the user's device - [OpenWeatherAPI] (https://api.openweathermap.org/data/2.5/)
 
-
 ## Features 🌟
 
 Global Air Quality Index (AQI) Dashboard: Access real-time air quality metrics from cities around the world.
-
 
 ## Getting Started 🚀
 
@@ -114,9 +113,11 @@ Contributions are welcome along with feedback, and suggestions. Feel free to ope
 If you found any bugs or would like to see new features, please let me know!
 
 
-### Connect with me on LinkedIn! 
+### Connect with me on Socials! 
 
-https://www.linkedin.com/in/casey-mcardle/
+- https://www.linkedin.com/in/casey-mcardle/
+
+- https://twitter.com/Casey_Jamess
 
 ### License 📜
 This project is licensed under the MIT License. See the LICENSE file for details.

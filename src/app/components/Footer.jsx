@@ -21,7 +21,7 @@ function Footer() {
     },
     {
       text: "Hire me!",
-      path: "https://casey-mcardle-portfolio.netlify.app/",
+      path: "",
     },
   ];
 
@@ -41,7 +41,7 @@ function Footer() {
   ];
 
   return (
-    <footer className=" mt-auto py-8">
+    <footer className="mt-auto py-16">
       <div className="flex flex-col max-w-screen-xl rounded-xl mx-2 px-2 xl:mx-auto">
         {/*
         <div className="flex mb-10 items-center justify-start">
