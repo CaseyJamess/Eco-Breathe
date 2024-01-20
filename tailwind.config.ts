@@ -13,9 +13,11 @@ const config: Config = {
         body: '#0a0a0a',
         component: '#0d0d0d',
         component2: '#323232',
-        accent: '#68ab63',
+        accent:'#60B45A',
         text2: '#93B1A6',
- 
+        //accent: '#68ab63',
+       
+  
         airQuality: {
           excellent: 'rgba(190, 212, 137, 1)',    // #bed489 - Good
           good: 'rgba(236, 134, 75, 1)',         // #ec864b - Moderate

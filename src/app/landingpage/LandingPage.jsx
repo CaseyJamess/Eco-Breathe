@@ -11,10 +11,6 @@ function LandingPage() {
   const [airQualityData, setAirQualityData] = useState("");
   const [locationName, setLocationName] = useState("");
 
-  const handleBackgroundColourChange = (color) => {
-    setBackgroundColour(color);
-  };
-
   const handleAirQualityData = (data) => {
     setAirQualityData(data);
   };
@@ -25,21 +21,21 @@ function LandingPage() {
   };
 
   return (
-    <div className="">
+    <div className="grid-layout min-h-dvh sm:min-h-full md:p-10">
       {/* left col*/}
-      <section className="component grid-layout ">
-        <About />
-        <div className="flex flex-col ">
-          <Gauge
-            airQualityData={airQualityData}
-            locationDisplayName={locationName}
-          />
 
-          <Search
-            onAirQualityData={handleAirQualityData}
-            onLocationName={handleLocationName}
-          />
-        </div>
+      <div className="">
+        <About />
+      </div>
+      <section className="mt-8 md:-mt-6 md:p-6 lg:-mt-8 lg:p-8">
+        <Gauge
+          airQualityData={airQualityData}
+          locationDisplayName={locationName}
+        />
+        <Search
+          onAirQualityData={handleAirQualityData}
+          onLocationName={handleLocationName}
+        />
       </section>
     </div>
   );

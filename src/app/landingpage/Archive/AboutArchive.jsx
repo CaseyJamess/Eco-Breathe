@@ -1,3 +1,5 @@
+//V 0.2 About with more info, Later approach more minimalist
+
 const About = () => {
   return (
     <>
@@ -7,7 +9,10 @@ const About = () => {
         </h1>
         <h2 className="mt-4 h2">Your realtime air quality companion</h2>
       </header>
-      <p className="mt-4 p">
+
+      <article>
+        {/*
+         <p className="mt-4 p">
           <strong>
             Eco<span className="text-accent">Breathe</span>
           </strong>{" "}
@@ -15,9 +20,17 @@ const About = () => {
           information, providing accurate
           hourly updates.
         </p>
-        <a href ="/about">
-        <button className="button-style mt-4">Learn More</button>
-        </a>
+        <p className="mt-4 p">
+          Whether you're preparing for an outdoor excursion or just keeping
+          tabs on your local environment, choose EcoBreathe for reliable
+          insights.
+        </p>
+        <p className="mt-4 p">
+          <strong>To begin</strong>, simply enter a location in the search
+          bar and let us handle the rest.
+        </p>
+  */}
+      </article>
     </>
   );
 };

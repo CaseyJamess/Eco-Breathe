@@ -33,15 +33,20 @@
   .input {
     @apply bg-component2 text-white rounded-xl;
   }
+
+  .input::placeholder {
+ 
+   @apply text-white opacity-90;
+  }
 }
 
 @layer utilities {
   .h1 {
-    @apply text-2xl xl:text-5xl tracking-tighter;
+    @apply text-3xl xl:text-6xl tracking-tighter;
   }
 
   .h2 {
-    @apply text-xl xl:text-3xl tracking-tight;
+    @apply text-2xl xl:text-4xl tracking-tight;
   }
 
   .h3 {

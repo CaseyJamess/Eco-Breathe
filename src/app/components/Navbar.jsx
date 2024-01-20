@@ -26,7 +26,7 @@ const Navbar = () => {
             width={60}
             height={60}
           />
-         <span className="h2 ml-2">EcoBreathe</span>
+        <span className="h2 ml-2">EcoBreathe</span>
         </a>
 
         {/* Toggle button for mobile */}

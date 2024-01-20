@@ -3,12 +3,14 @@
 import React, { useEffect } from "react";
 import GaugeChart from "react-gauge-chart";
 
-function Gauge({ airQualityData, locationName }) {
+function Gauge({ airQualityData, locationDisplayName }) {
 
 
 console.log("dataa", airQualityData);
 
-  const { city, country } = locationName || {};
+console.log("dataa", locationDisplayName);
+
+  const { city, country } = locationDisplayName || {};
   /* const formatDateAndTime = (airQualityData.dt) => {
     const date = new Date(timestamp);
     const options = {
@@ -28,13 +30,13 @@ console.log("dataa", airQualityData);
 
 
   return (
-    <div className="lg:w-11/12 flex flex-col justify-between items-center">
+    <div className="flex flex-col">
       <GaugeChart
         id="gauge"
         nrOfLevels={5}
         colors={["#22c55e", "#facc15", "#f97316", "#dc2626", "#6B21A8"]}
         percent={0}
-        arcWidth={0.15}
+        arcWidth={0.12}
         arcPadding={0.03}
         hideText={true}
       />
