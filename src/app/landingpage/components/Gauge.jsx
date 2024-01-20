@@ -3,14 +3,13 @@
 import React, { useEffect } from "react";
 import GaugeChart from "react-gauge-chart";
 
-function Gauge({ airData, feedbackMessage }) {
-  const {
-    city,
-    country,
-    current: { weather: { ts } = {}, pollution: { aqius } = {} } = {},
-  } = airData || {};
+function Gauge({ airQualityData, locationName }) {
 
-  const formatDateAndTime = (timestamp) => {
+
+console.log("dataa", airQualityData);
+
+  const { city, country } = locationName || {};
+  /* const formatDateAndTime = (airQualityData.dt) => {
     const date = new Date(timestamp);
     const options = {
       weekday: "long",
@@ -24,35 +23,18 @@ function Gauge({ airData, feedbackMessage }) {
     return date.toLocaleString(undefined, options);
   };
 
-  const formattedTs = formatDateAndTime(ts);
+  */
+  //const formattedTs = formatDateAndTime(ts);
 
-  useEffect(() => {
-    console.log("Updated airData in Gauge component:", airData);
-  }, [airData]);
-
-  const calculateAqiPercent = (aqiValue) => {
-    const maxAqi = 500;
-    return aqiValue ? aqiValue / maxAqi : 0;
-  };
-
-  const aqiPercent = calculateAqiPercent(aqius);
 
   return (
-    <div className=" lg:w-11/12 flex flex-col justify-between items-center">
+    <div className="lg:w-11/12 flex flex-col justify-between items-center">
       <GaugeChart
         id="gauge"
-        nrOfLevels={6}
-        arcsLength={[0.1, 0.1, 0.1, 0.1, 0.2, 0.4]}
-        colors={[
-          "#22c55e",
-          "#facc15",
-          "#f97316",
-          "#dc2626",
-          "#6B21A8",
-          "#881337",
-        ]}
-        percent={aqiPercent}
-        arcWidth={0.3}
+        nrOfLevels={5}
+        colors={["#22c55e", "#facc15", "#f97316", "#dc2626", "#6B21A8"]}
+        percent={0}
+        arcWidth={0.15}
         arcPadding={0.03}
         hideText={true}
       />
@@ -60,31 +42,23 @@ function Gauge({ airData, feedbackMessage }) {
         id="responseData"
         className="text-center flex flex-col justify-center items-center h-20"
       >
-        {feedbackMessage ? (
-          <p className="text-red-600 p bg-white dark:text-red-500">
-            {feedbackMessage}
-          </p>
-        ) : airData && city && country ? (
-          <>
-            <h3 className="h3">
-              <strong>
-                {city}, {country}
-              </strong>
-            </h3>
-            {ts && aqius && (
-              <>
-                <p className="p">{formattedTs}</p>
-                <p className="p">
-                  Air Quality Index: <strong>{aqius}</strong>
-                </p>
-              </>
-            )}
-          </>
-        ) : (
-          <p className="text-gray-600 p dark:text-gray-300">
-            Awaiting Air Quality data...
-          </p>
-        )}
+        <div className="my-4 rounded-xl p-4 md:p-8">
+          <h3 className="h3 text-black"></h3>
+          <div className="flex flex-col md:flex-row">
+            {/* Display information from the passed onHandleLocationName prop */}
+            <div className="">
+              <p className="mr-2 text-black">City: {}</p>
+            </div>
+            <div className="">
+              <p className="mr-2 text-black">Country: {}</p>
+            </div>
+            {/* Access components properties as needed */}
+            <div className="">
+              <p className="mr-2 text-black">Component Value: {}</p>
+            </div>
+            {/* Display other properties like aqi and formattedDateTime */}
+          </div>
+        </div>
       </div>
     </div>
   );

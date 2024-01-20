@@ -5,9 +5,11 @@ import { FaMapMarkerAlt, FaSearch } from "react-icons/fa";
 import { getLocation } from "../../services/getLocation";
 import { getAirQuality } from "../../services/getAirQuality";
 
+import SearchButton from "./search/SearchButton";
 import debounce from "lodash/debounce";
 
-const Search = () => {
+const Search = ({ onAirQualityData, onLocationName }) => {
+  
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -16,10 +18,12 @@ const Search = () => {
   const [selectedCoordinates, setSelectedCoordinates] = useState(null);
   const [airQualityData, setAirQualityData] = useState(null);
 
-  const debouncedFunction = useCallback(debounce((value) => {
-
-    console.log(value);
-  }, 500), []);
+  const debouncedFunction = useCallback(
+    debounce((value) => {
+      console.log(value);
+    }, 700),
+    []
+  );
 
   const handleInputChange = (e) => {
     const updatedValue = e.target.value.replace(/[^a-zA-Z\s]/g, "");
@@ -29,14 +33,14 @@ const Search = () => {
     setShowSuggestions(true);
   };
 
-  const selectSuggestion = async (suggestion) => {
+  const selectSuggestion = async (location) => {
     try {
-      const { suggestions, locationCoordinates } =
-        await getLocation(suggestion);
-      setSuggestions(suggestions);
+      const { suggestions, locationCoordinates } = await getLocation(location);
+      setSuggestions("");
       const formattedCoords = formatCoordinates(locationCoordinates);
       setSelectedCoordinates(formattedCoords);
-      setInputValue(suggestion);
+      setInputValue(location);
+      onLocationName(location);
       setShouldFetch(false);
       setShowSuggestions(false);
     } catch (error) {
@@ -46,9 +50,10 @@ const Search = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      getAirQuality(selectedCoordinates);
+      const response = await getAirQuality(selectedCoordinates);
+      processResponseData(response);
+      console.log(onLocationName);
       setShowSuggestions(false);
     } catch (error) {
       console.error("Error fetching air quality data:", error);
@@ -57,6 +62,10 @@ const Search = () => {
 
   const formatCoordinates = (coords) => {
     return Array.isArray(coords) ? coords[0] : coords;
+  };
+
+  const processResponseData = (data) => {
+    onAirQualityData(data);
   };
 
   useEffect(() => {
@@ -71,7 +80,6 @@ const Search = () => {
           console.log(error);
         }
       };
-
       fetchData();
     }
   }, [inputValue, shouldFetch]);
@@ -96,27 +104,21 @@ const Search = () => {
           {showSuggestions && suggestions.length > 0 && (
             <>
               <ul className="absolute z-10 w-full ">
-                {suggestions.map((suggestion, index) => (
+                {suggestions.map((location, index) => (
                   <li key={index}>
                     <button
                       className=" border-b border-l z-10 bg-component border-r rounded-md text-sm p-2  hover:bg-accent hover:text-component w-full text-start duration-300"
                       type="button"
-                      onClick={() => selectSuggestion(suggestion)}
+                      onClick={() => selectSuggestion(location)}
                     >
-                      {suggestion}
+                      {location}
                     </button>
                   </li>
                 ))}
               </ul>
             </>
           )}
-          <button
-            type="submit"
-            className="text-white absolute right-1 transform -translate-y-1/2 top-1/2  
-              duration-300 hover:bg-blue-900 focus:outline-none rounded-xl md:text-base text-sm px-4 py-2  "
-          >
-            <FaSearch className="z-20 w-5 h-5 hover:scale-110 duration-300 cursor-pointer" />
-          </button>
+          <SearchButton />
         </div>
       </form>
     </>

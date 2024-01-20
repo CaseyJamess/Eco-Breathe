@@ -27,8 +27,8 @@ function Footer() {
 
   const informationLinks = [
     {
-      text: "Air Quality & Climate",
-      link: "https://www.who.int/airpollution/guidelines/en/",
+      text: "Air Quality",
+      link: "https://www.who.int/health-topics/air-pollution#tab=tab_1",
     },
     {
       text: "Effects on Health",
@@ -41,8 +41,8 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-component py-8">
-      <div className="flex flex-col max-w-screen-xl mx-2 px-2 xl:mx-auto">
+    <footer className=" mt-auto py-8">
+      <div className="flex flex-col max-w-screen-xl rounded-xl mx-2 px-2 xl:mx-auto">
         {/*
         <div className="flex mb-10 items-center justify-start">
           <Image
@@ -55,7 +55,6 @@ function Footer() {
           <h3 className="md:text-5xl text-3xl font-bold">AirActive</h3>
         </div>
   */}
-
         <div className="flex flex-col md:flex-row w-full ">
           {/* About AirActive Column */}
           <div className="w-full  md:w-4/12 md:mx-10 items-start ">
@@ -116,7 +115,7 @@ function Footer() {
           </div>
         </div>
 
-        <p className="mt-10  text-center">
+        <p className="mt-8 text-center">
           &copy; {new Date().getFullYear()} Eco<span className="text-accent">Breathe</span>. All rights reserved.
         </p>
       </div>

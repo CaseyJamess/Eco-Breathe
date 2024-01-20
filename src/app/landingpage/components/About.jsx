@@ -17,7 +17,7 @@ const About = () => {
           information. We prioritise your health by delivering accurate,
           hourly updates.
         </p>
-        <p className="mt-4 p">
+        {/*<p className="mt-4 p">
           Whether you're preparing for an outdoor excursion or just keeping
           tabs on your local environment, choose EcoBreathe for reliable
           insights.
@@ -26,6 +26,7 @@ const About = () => {
           <strong>To begin</strong>, simply enter a location in the search
           bar and let us handle the rest.
         </p>
+  */}
       </article>
     </>
   );

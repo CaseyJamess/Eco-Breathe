@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
           {/* Favicon */}
     <link rel="icon" type="image/png" href="./Air-Active.svg" />
     </head>
-      <body>
+      <body className=' flex flex-col min-h-screen my-auto bg-body text-white leading-loose'>
         <Navbar />
         <main>
         {children}
