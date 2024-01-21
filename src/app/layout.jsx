@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
@@ -15,21 +15,44 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
         {/* SEO Related Tags */}
         <title>EcoBreathe: Breathe Better, Live Healthier</title>
-        <meta name="description" content="Stay informed with real-time air quality updates for any location. Discover the best times to be outdoors and ensure a healthier lifestyle by monitoring the air you breathe." />
-        <meta name="keywords" content="Air Quality, Health, Breathe, Outdoor Activities, Pollution, Clean Air" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <meta
+          name="description"
+          content="Stay informed with real-time air quality updates for any location. Discover the best times to be outdoors and ensure a healthier lifestyle by monitoring the air you breathe."
+        />
+        <meta
+          name="keywords"
+          content="Air Quality, Health, Breathe, Outdoor Activities, Pollution, Clean Air"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon/favicon-16x16.png"
+        />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-    </head>
-      <body className=' flex flex-col min-h-screen my-auto bg-body text-white leading-loose'>
+        <script src="/themeswitch.js" />
+      </head>
+      <body>
         <Navbar />
-        <main>
-        {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

@@ -2,21 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Archivo", sans-serif;
+  min-width: 0;
+  min-height: 0;
+}
+
+.display-none {
+  display: none;
+}
+
+* {
+  transition: color 0.1s;
+}
+
+::selection {
+  background-color: #1DB954;
+  color: #ffffff;
+}
+
 @layer base {
   body {
-    font-family: "Archivo", sans-serif;
-    min-width: 0;
-   @apply mx-2 px-2 ;
+    @apply flex flex-col min-h-screen my-auto bg-primary dark:bg-dark-primary text-secondary dark:text-dark-secondary leading-loose;
   }
 
-  ::selection {
-    @apply bg-accent text-white;
-}
 
   main {
-    @apply max-w-screen-xl xl:mx-auto my-4 lg:my-8 flex flex-col;
+    @apply max-w-screen-xl my-4 lg:my-8 flex mx-4 px-4 xl:mx-auto flex-col;
   }
+
 }
+
 
 @layer components {
   .button-style {
@@ -24,7 +40,7 @@
   }
 
   .component {
-    @apply bg-component border-component border rounded-lg p-4 lg:p-8;
+    @apply bg-none shadow-md dark:shadow-none shadow-secondary2 rounded-lg p-4 lg:p-8;
   }
 
   .grid-layout {
@@ -32,12 +48,12 @@
   }
 
   .input {
-    @apply bg-component2 text-white rounded-xl;
+    @apply bg-primary border-secondary border border-opacity-40 dark:shadow-none focus:outline-accent shadow-secondary2 dark:bg-shadow text-secondary dark:text-primary rounded-xl;
   }
 
   .input::placeholder {
- 
-   @apply text-white opacity-90;
+
+    @apply text-secondary dark:text-primary opacity-90;
   }
 }
 

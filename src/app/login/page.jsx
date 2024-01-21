@@ -4,8 +4,8 @@ import EnvironmentQuotes from "./components/EnvironmentQuotes";
 import Mission from "./components/Mission";
 function Login() {
   return (
-    <div className="max-w-screen-xl mx-2 px-2 my-4 lg:my-8 xl:mx-auto">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+    <div className="grid-layout min-h-dvh sm:min-h-full md:py-10">
       <section>
         <LoginComponent />
       </section>
@@ -13,7 +13,6 @@ function Login() {
         <Mission />
         <EnvironmentQuotes />
       </section>
-    </div>
     </div>
   );
 }

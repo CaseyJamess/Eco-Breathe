@@ -51,7 +51,7 @@ dateTime: 1705759973
               </p>
             </div>
           )}
-          <div className="rounded-xl mt-4">
+          <div className="rounded-xl mt-2">
             {airQualityData && (
               <div className="flex flex-row text-sm lg:text-base">
                 {Object.keys(components).map((key) => (

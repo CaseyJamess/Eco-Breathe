@@ -4,8 +4,6 @@ import React, { useState } from "react";
 import SignUp from "../signup/components/SignUp"; // Assume SignUp and Login are your popup components
 
 function About() {
-  const [showSignUp, setShowSignUp] = useState(false);
-
   return (
     <div>
       <header className=" mx-2 px-2 md:py-10">
@@ -14,8 +12,8 @@ function About() {
         </h1>
       </header>
 
-      <section className="max-w-screen-lg">
-        <article className="component mb-8">
+      <section className="max-w-screen-lg component ">
+        <article className="mb-8">
           <h2 className="text-start h2">
             Understanding Air Quality and Its Importance
           </h2>
@@ -71,7 +69,7 @@ function About() {
           </p>
         </article>
 
-        <article className="component my-8 ">
+        <article className=" my-8 ">
           <h3 className=" h2 font-semibold ">Who We Are</h3>
           <p className="mt-8 p leading-relaxed">
             Eco<span className="text-accent">Breathe</span> is a single-person
@@ -83,7 +81,7 @@ function About() {
           </p>
         </article>
 
-        <article className="component my-8">
+        <article className=" my-8">
           <h3 className="font-semibold h2">Our Mission</h3>
           <p className="mt-8 p leading-relaxed">
             At Eco<span className="text-accent">Breathe</span>, our mission is
@@ -104,7 +102,7 @@ function About() {
           </p>
         </article>
 
-        <div className="component my-8">
+        <div className=" my-8">
           <h4 className="h2 text-accent">* </h4>
           <p className="p">
             Please note that the Air Quality Index (AQI) displayed on the
@@ -113,7 +111,7 @@ function About() {
             different countries and organizations may use their own metrics to
             determine the Air Quality Index.
             </p>
-            <p className="mt-8"> Learn more here:
+            <p className="mt-8 p"> Learn more here:
             <a
               href="https://openweathermap.org/air-pollution-index-levels"
               className="text-accent ml-2 hover:underline duration-300  hover:opacity-80 cursor-pointer"

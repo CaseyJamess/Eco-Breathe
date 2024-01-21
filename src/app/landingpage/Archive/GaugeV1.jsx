@@ -61,9 +61,7 @@ function Gauge({ airData, feedbackMessage }) {
         className="text-center flex flex-col justify-center items-center h-20"
       >
         {feedbackMessage ? (
-          <p className="text-red-600 p bg-white dark:text-red-500">
-            {feedbackMessage}
-          </p>
+          <p className="text-red-600 p bg-white ">{feedbackMessage}</p>
         ) : airData && city && country ? (
           <>
             <h3 className="h3">
@@ -81,9 +79,7 @@ function Gauge({ airData, feedbackMessage }) {
             )}
           </>
         ) : (
-          <p className="text-gray-600 p dark:text-gray-300">
-            Awaiting Air Quality data...
-          </p>
+          <p className="text-gray-600 ">Awaiting Air Quality data...</p>
         )}
       </div>
     </div>

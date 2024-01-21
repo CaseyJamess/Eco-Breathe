@@ -9,17 +9,20 @@ Leveraging real-time air quality data from across the globe, EcoBreathe aids use
 ## Overview 🌐
 
 The deteriorating quality of air in various parts of the world has raised genuine health concerns.  
-EcoBreathe seeks to empower individuals with actionable insights about air quality, a
+EcoBreathe seeks to empower individuals with actionable insights about air quality and the wider environment.
 
 ## Latest Release
 
 Version 0.2.3 - 20/01/24
 
-Author: Casey Jamess
+Author: Casey James
 
 ### Working On
 
-- UI/UX updates,
+- UI/UX updates; particularly displaying the data
+
+- Server side integration
+
 
 ### Additions
 
@@ -40,7 +43,6 @@ Author: Casey Jamess
 - Personalized Recommendations: Based on your location and the current AQI, get suggestions on the best times for outdoor activities.
 - User Profiles: Save preferences, track activity patterns, add any comments, and get customised alerts.
 - UI/UX Update
-
 
 ## Tech Stack
 

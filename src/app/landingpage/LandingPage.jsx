@@ -20,16 +20,15 @@ function LandingPage() {
   };
 
   return (
-    <div className="grid-layout min-h-dvh sm:min-h-full md:p-10">
+    <div className="grid-layout min-h-dvh sm:min-h-full md:py-10 xl:mx-auto">
       <div className="">
         <About />
         <Search
           onAirQualityData={handleAirQualityData}
           onLocationName={handleLocationName}
         />
-      
       </div>
-      <section className="mt-2 md:-mt-8 md:p-6 lg:-mt-10 lg:p-8">
+      <section className="mt-2 md:-mt-2  ">
         <Gauge
           airQualityData={airQualityData}
           locationDisplayName={locationName}
