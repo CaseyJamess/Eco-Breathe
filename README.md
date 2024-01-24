@@ -1,5 +1,6 @@
 # EcoBreathe - Real Time Air Quality Monitoring! 🌎
 
+
 Welcome to EcoBreathe!
 
 This repo is the front-end of a full-stack web application designed for the health-conscious and environmentally aware.
@@ -17,34 +18,28 @@ EcoBreathe seeks to empower individuals with actionable insights about air quali
 Global Air Quality Index (AQI) Dashboard: Access real-time air quality metrics from cities around the world.
 
 
-
 ## Latest Release
 
-Version 0.3 - 24/01/24
+Version 0.3.1 - 24/01/24
 
 Author: Casey James
 
+### Next Update / Updates to come
 
-### Next Update
+- UI/UX updates in displaying AQ Data
 
-- UI/UX updates; particularly displaying the data
+- Precise error handling for exceeding API rate limits
 
 - Server side integration, user end points & building the user profile area.
 
 
 ### Additions
 
-- Implemented a secure client-side API key, leveraging the Open Weather API, to provide users with real-time updates on Air Quality.
-
-- Enhanced code maintainability by organizing all AXIOS requests into the /services folder, promoting a more modular codebase.
-
-- Further enhanced code maintainability by separating pages with components
-
-- Added Debounce to search function
+- Added HTTPS to OpenWeatherMap API endpoint
 
 ### Bugs to address
 
-- Ensure that the drop-down suggestions disappear when the input is empty.
+- None at the minute - find some! 
 
 ## Features To Come - Feel free to suggest/add!
 

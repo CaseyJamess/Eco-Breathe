@@ -6,7 +6,7 @@ export const getAirQuality = async (coords) => {
 
     const longitude = coords[0];
     const latitude = coords[1];
-    const response = await axios.get(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=${AQ_API}`);
+    const response = await axios.get(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}&appid=${AQ_API}`);
     
     const airQualityData = response.data.list[0];
     const aqi = airQualityData.main.aqi;
