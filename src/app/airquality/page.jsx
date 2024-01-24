@@ -141,12 +141,13 @@ const AirQuality = () => {
                 The data collected is then used to compute the Air Quality Index
                 <strong className="text-accent"> (AQI)</strong>, a standardised
                 indicator to inform users about the sampled Air pollution levels
-                and any associated health implications. </p>
-                <p className="p">AQI values range from 0
-                to 500, with higher values indicating poorer Air Quality and
-                greater health risks.{" "}<span className="text-green-700 h2">*</span>
+                and any associated health implications.{" "}
               </p>
-           
+              <p className="p">
+                AQI values range from 0 to 500, with higher values indicating
+                poorer Air Quality and greater health risks.{" "}
+                <span className="text-green-700 h2">*</span>
+              </p>
             </div>
           </article>
 
@@ -163,6 +164,8 @@ const AirQuality = () => {
               {" "}
               Learn more here:
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://openweathermap.org/air-pollution-index-levels"
                 className="text-accent ml-2 text-green-700 hover:underline duration-300  hover:opacity-80 cursor-pointer"
               >

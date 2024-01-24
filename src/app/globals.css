@@ -5,7 +5,7 @@
 
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   min-width: 0;
   min-height: 100vh;
 }
@@ -43,7 +43,7 @@ body {
 
 @layer components {
   .button-style {
-    @apply bg-green-600 hover:bg-green-700 text-stone-50 hover:bg-opacity-90 rounded-lg xl:text-lg text-sm text-center py-2 px-4;
+    @apply bg-green-700 hover:bg-green-800 text-stone-50 hover:bg-opacity-90 rounded-lg xl:text-lg text-sm text-center py-2 px-4;
   }
 
   .component {

@@ -26,7 +26,7 @@ function LandingPage() {
 
   return (
     <div className="page lg:min-h-full xl:mx-auto">
-    <div className="grid-layout mt-24 mb-40 min-h-dvh sm:min-h-auto lg:mt-40 lg:mb-60">
+    <div className="grid-layout mt-20 mb-36 min-h-dvh sm:min-h-auto lg:mt-40 lg:mb-60">
       <div className="">
         <About />
         <Search

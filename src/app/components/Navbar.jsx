@@ -10,9 +10,9 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const menuItems = [
-    { name: "Latest", path: "/about" },
+    { name: "Latest", path: "/latest" },
     { name: "Air Quality", path: "/airquality" },
-    { name: "About Us", path: "/about" },
+    { name: "About Us", path: "/aboutus" },
     { name: "FAQs", path: "/FAQs" },
     { name: "Login", path: "/login" },
   ];
@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className=" max-w-screen-xl bg-stone-50 rounded-2xl flex flex-wrap items-center justify-between xl:mx-auto px-2 mx-2 lg:px-4 py-4">
         <a href="/" className="flex flex-row items-center hover:cursor-pointer">
           <Image src="/EcoBreathe.svg" alt="Logo" width={44} height={44} />
-          <p className=" h4 hidden lg:flex ml-4">
+          <p className="text-base lg:text-lg hidden lg:flex ml-4">
             Eco<span className="text-green-700">Breathe</span>
           </p>
         </a>

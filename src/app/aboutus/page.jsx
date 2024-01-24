@@ -25,7 +25,7 @@ const About = () => {
                   </strong>{" "}
                   was founded by{" "}
                   <a
-                    href="https://example.com/"
+                    href="https://twitter.com/Casey_Jamess"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-green-600 hover:underline hover:opacity-80 duration-300"
