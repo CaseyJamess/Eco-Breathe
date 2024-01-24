@@ -1,19 +1,16 @@
 import React from "react";
 import SignUp from "./components/SignUp";
-import Info from "./components/Info";
+import SignUpInfo from "./components/SignUpInfo";
+
 function page() {
   return (
-    <div className="max-w-screen-xl mx-2 px-2 my-4 lg:my-8 xl:mx-auto">
-      <div className="grid-layout">
-        {/* Left Col */}
-        <section>
-          <Info />
-        </section>
-        {/* Right Col */}
-        <section>
-          <SignUp />
-        </section>
-      </div>
+    <div className="grid-layout ">
+      <header>
+        <h1 className="h1">
+          Get started with Eco<span className="text-accent">Breathe</span>
+        </h1>
+      </header>
+      <SignUp />
     </div>
   );
 }

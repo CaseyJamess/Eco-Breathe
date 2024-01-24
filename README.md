@@ -6,22 +6,30 @@ This repo is the front-end of a full-stack web application designed for the heal
 
 Leveraging real-time air quality data from across the globe, EcoBreathe aids users in determining the ideal times to engage in outdoor activities, ensuring that you're breathing only the best whilst getting fit.
 
+
 ## Overview 🌐
 
 The deteriorating quality of air in various parts of the world has raised genuine health concerns.  
 EcoBreathe seeks to empower individuals with actionable insights about air quality and the wider environment.
 
+## Features 🌟
+
+Global Air Quality Index (AQI) Dashboard: Access real-time air quality metrics from cities around the world.
+
+
+
 ## Latest Release
 
-Version 0.2.3 - 20/01/24
+Version 0.3 - 24/01/24
 
 Author: Casey James
 
-### Working On
+
+### Next Update
 
 - UI/UX updates; particularly displaying the data
 
-- Server side integration
+- Server side integration, user end points & building the user profile area.
 
 
 ### Additions
@@ -42,7 +50,6 @@ Author: Casey James
 
 - Personalized Recommendations: Based on your location and the current AQI, get suggestions on the best times for outdoor activities.
 - User Profiles: Save preferences, track activity patterns, add any comments, and get customised alerts.
-- UI/UX Update
 
 ## Tech Stack
 
@@ -62,9 +69,6 @@ APIs:
 
 - Incorporated client-side requests for the Air Quality API, enhancing the application's responsiveness by directly fetching and updating air quality data on the user's device - [OpenWeatherAPI] (https://api.openweathermap.org/data/2.5/)
 
-## Features 🌟
-
-Global Air Quality Index (AQI) Dashboard: Access real-time air quality metrics from cities around the world.
 
 ## Getting Started 🚀
 

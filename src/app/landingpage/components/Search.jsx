@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect, useCallback } from "react";
 import { FaMapMarkerAlt, FaSearch } from "react-icons/fa";
 import { getLocation } from "../../services/getLocation";
@@ -86,7 +84,7 @@ const Search = ({ onAirQualityData, onLocationName }) => {
       <form onSubmit={handleSubmit}>
         <div className="relative w-11/12 lg:w-2/3 mt-4 xl:mt-8">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 ">
-            <FaMapMarkerAlt className="z-20 w-5 h-5 hover:scale-110 duration-300 cursor-pointer text-gray-500 dark:text-gray-400" />
+            <FaMapMarkerAlt className="z-20 w-5 h-5 hover:scale-110 duration-300 cursor-pointer text-stone-500 dark:text-stone-400" />
           </div>
           <input
             type="text"
@@ -100,11 +98,11 @@ const Search = ({ onAirQualityData, onLocationName }) => {
 
           {showSuggestions && suggestions.length > 0 && (
             <>
-              <ul className="absolute z-10 w-full ">
+              <ul className="absolute z-30 w-full ">
                 {suggestions.map((location, index) => (
                   <li key={index}>
                     <button
-                      className=" border-b border-l z-10 bg-component border-r rounded-md text-sm p-2  hover:bg-accent hover:text-component w-full text-start duration-300"
+                      className=" border-b border-l z-10 bg-stone-50 border-r rounded-md text-sm p-2  hover:bg-green-600 hover:text-stone-50 w-full text-start duration-100"
                       type="button"
                       onClick={() => selectSuggestion(location)}
                     >

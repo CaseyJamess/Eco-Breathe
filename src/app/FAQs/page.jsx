@@ -2,20 +2,14 @@ import FAQs from "./components/FAQS";
 
 function FAQPage() {
   return (
-    <div className="p-8 max-w-screen-xl mx-2 xl:mx-auto px-2 items-center justify-center">
-      <header className=' p-4 lg:p-8"'>
-        <h1 className="h1 accent mt-4 leading-normal ">
-          Frequently Asked <span className="text-accent">Questions</span>
-        </h1>
-        <p className="mt-4 xl:w-10/12 p">
-          Welcome to our FAQ section! Here, we aim to address some of the most
-          common questions and concerns you might have about Eco
-          <span className="text-accent">Breathe</span>. Whether you're curious
-          about how our real-time air quality monitoring works, or how to make
-          the most out of your account, we've got answers.
-        </p>
+    <div className="w-full mx-auto">
+      <header className="text-center max-w-screen-2xl 2xl:mx-auto bg-green-700 rounded-2xl mx-4 px-4 text-stone-50 flex flex-col justify-center p-4 lg:p-8 items-center min-h-[56vh] lg:min-h-[76vh] 2xl:min-h-[50vh]">
+        <h1 className="h2">You've got questions...</h1>
+        <h2 className="h1 mt-4 lg:mt-8">...We've got your answers!</h2>
       </header>
+      <div className="text-page my-16 lg:my-32">
       <FAQs />
+      </div>
     </div>
   );
 }

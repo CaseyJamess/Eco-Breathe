@@ -1,4 +1,4 @@
-function Info() {
+const SignUpInfo = () => {
 
   const info = [
     {
@@ -28,20 +28,17 @@ function Info() {
     },
   ];
   return (
-    <article className="component">
-      <h1 className="h1 mb-8 my-0 lg:my-8">
-        Get started with Eco<span className="text-accent">Breathe</span>
-      </h1>
+    <div className="">
       {info.map((item) => (
         <ul key={item.id} className="list-disc p list-inside">
-          <li className="mb-4">
-            <strong className="accent text-lg">{item.title}</strong>
+          <li className="">
+            <strong className="accent">{item.title}</strong>
             {item.info}
           </li>
         </ul>
       ))}
-    </article>
+    </div>
   );
 }
 
-export default Info;
+export default SignUpInfo;

@@ -5,8 +5,8 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const FAQs = () => {
-
-  const hi = "You can sign up for free by clicking the Sign Up button on the top-right corner of the homepage. Follow the instructions to create your account";
+  const hi =
+    "You can sign up for free by clicking the Sign Up button on the top-right corner of the homepage. Follow the instructions to create your account";
   const questions = [
     {
       id: 0,
@@ -17,8 +17,7 @@ const FAQs = () => {
     {
       id: 1,
       question: "How do I sign up?",
-      answer:
-        'Sign up option coming soon...',
+      answer: "Sign up option coming soon...",
     },
     {
       id: 2,
@@ -51,12 +50,12 @@ const FAQs = () => {
   };
 
   return (
-    <div className="my-16 bg-component max-w-screen-md mx-auto w-full">
+    <div className=" text-stone-800 w-full">
       {questions.map(({ id, question, answer }, index) => (
         <div
-          className={`p-6 border-l border-r border-blue-950 dark:border-white border-t ${
+          className={`p-6 border-l border-r border-stone-800 dark:border-white border-t ${
             index === questions.length - 1 ? "border-b" : ""
-          } border-blue-950`}
+          } border-stone-950`}
           key={id}
         >
           <div className="flex items-center justify-between">

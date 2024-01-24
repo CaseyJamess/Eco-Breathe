@@ -31,7 +31,7 @@ function SignUp() {
 
   return (
         <form onSubmit={formik.handleSubmit} className="component space-y-4">
-          <h3 className="text-5xl mt-2">Sign up today<span className='accent'>!</span></h3>
+          <h3 className="h2">Sign up today<span className='text-accent'>!</span></h3>
           {/* Username */}
           <div className="relative mt-2">
             <BsFillPersonVcardFill className="absolute text-gray-400 right-2 top-1/2 transform -translate-y-1/2" />

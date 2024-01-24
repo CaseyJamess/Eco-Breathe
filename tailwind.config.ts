@@ -10,26 +10,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-      
-        primary: "#f8f8f8",
-        secondary: '#0d0d0d',
-        accent: '#1DB954',
-        variant: '#0d0d0d',
-        variant2: '#323232',
-        secondary2: '#eeeeee',
-        shadow: "#002300",
-        dark: {
-          primary: '#000F00 ',
-          secondary: '#f8f8f8',
-          variant: '#010904',
-          variant2: '#323232',
-          secondary2:'#93B1A6',
+        brown: {
+          50: '#fdf8f6',
+          100: '#f2e8e5',
+          200: '#eaddd7',
+          300: '#e0cec7',
+          400: '#d2bab0',
+          500: '#bfa094',
+          600: '#a18072',
+          700: '#977669',
+          800: '#846358',
+          900: '#43302b',
         },
+    
       },
     },
   },
   plugins: [
-]
+    require('@tailwindcss/typography'),
+    // ...
+  ],
 
 };
 

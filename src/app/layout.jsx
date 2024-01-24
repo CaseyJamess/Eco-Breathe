@@ -1,6 +1,8 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import { usePathname, useSearchParams } from "next/navigation";
 import "./globals.css";
 
 export const metaInfo = {
@@ -10,16 +12,29 @@ export const metaInfo = {
 };
 
 export default function RootLayout({ children }) {
+
+  const pathname = usePathname();
+
+  const [signInPage, setIsSignInPage] = useState(false);
+  //const [signUpPage, setIsSignUpPage] = useState(false);
+
+  useEffect(() => {
+    setIsSignInPage(pathname === "/login");
+    //setIsSignIUpPage(pathname === "/signup");
+  }, [pathname]);
+
+  console.log("pathname:", pathname);
+
   return (
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         <link
-          href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         />
+        <link rel="stylesheet" />
         {/* SEO Related Tags */}
         <title>EcoBreathe: Breathe Better, Live Healthier</title>
         <meta
@@ -51,9 +66,9 @@ export default function RootLayout({ children }) {
         <script src="/themeswitch.js" />
       </head>
       <body>
-        <Navbar />
+       {!signInPage && <Navbar /> }
         <main>{children}</main>
-        <Footer />
+        {!signInPage  && <Footer />}
       </body>
     </html>
   );

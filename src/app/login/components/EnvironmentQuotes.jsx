@@ -10,10 +10,7 @@ const quotes = [
       body: "Air pollution is a silent killer. ",
       detail: "We need to act now."
     },
-    {
-      body: "The environment is where we all meet; where we all have a mutual interest; it is the one thing",
-      detail: " all of us share."
-    },
+
     {
       body: "We won't have a society if we",
       detail: " destroy the environment."
@@ -47,13 +44,13 @@ function EnvironmentQuotes() {
   
     useEffect(() => {
       const timer1 = setInterval(() => {
-        setShow(false); // Fade out
-      }, 7000); // Start fading out after 7 seconds
+        setShow(false);
+      }, 7000); 
   
       const timer2 = setInterval(() => {
         setCurrentQuoteIndex(prevIndex => (prevIndex + 1) % quotes.length);
-        setShow(true); // Fade in
-      }, 8000); // Change quote every 8 seconds
+        setShow(true); 
+      }, 8000); 
   
       return () => {
         clearInterval(timer1);
@@ -61,12 +58,10 @@ function EnvironmentQuotes() {
       };
     }, []);
 
-    
-  
     return (
-      <div className='mt-auto'>
+      <div className=''>
         <blockquote className={`transition-all ease-in-out duration-1000 ${show ? 'opacity-100' : 'opacity-1'}`}>
-          <p className='text-xl xl:text-3xl'>
+          <p className='h4 text-gray-800'>
            "{quotes[currentQuoteIndex].body}
             {' '}
             <span className="">
