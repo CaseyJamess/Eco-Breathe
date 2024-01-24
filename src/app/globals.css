@@ -18,8 +18,6 @@ body {
   transition: color 0.05s;
 }
 
-
-
 ::selection {
   background-color: #0ec32c;
   color: #ffffff;

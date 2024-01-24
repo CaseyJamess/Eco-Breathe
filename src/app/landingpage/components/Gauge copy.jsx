@@ -1,10 +1,21 @@
+"use client";
+
 import React, { useEffect } from "react";
 import GaugeChart from "react-gauge-chart";
 import timestamp from "time-stamp";
 
-function Gauge({ airQualityData = {}, locationDisplayName = "" }) {
-  const { aqi = 0, components = {}, dateTime } = airQualityData;
+function Gauge({ airQualityData, locationDisplayName }) {
+  const { aqi, components, dateTime } = airQualityData;
   const time = timestamp("HH:mm", new Date(dateTime * 1000));
+
+  /*
+
+airQualityData returns: 
+
+aqi: 5
+components: Object { co: 5233.77, no: 50.96, no2: 128.87, … }
+dateTime: 1705759973
+*/
 
   const calculateAqiPercent = (aqiValue) => {
     const maxAqi = 5;

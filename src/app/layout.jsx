@@ -12,7 +12,6 @@ export const metaInfo = {
 };
 
 export default function RootLayout({ children }) {
-
   const pathname = usePathname();
 
   const [signInPage, setIsSignInPage] = useState(false);
@@ -63,12 +62,11 @@ export default function RootLayout({ children }) {
           href="/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        <script src="/themeswitch.js" />
       </head>
       <body>
-       {!signInPage && <Navbar /> }
+        {!signInPage && <Navbar />}
         <main>{children}</main>
-        {!signInPage  && <Footer />}
+        {!signInPage && <Footer />}
       </body>
     </html>
   );
