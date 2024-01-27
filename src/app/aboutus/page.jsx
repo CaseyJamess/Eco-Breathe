@@ -50,9 +50,9 @@ const About = () => {
               </div>
             </div>
             <p className="p pt-4">
-              <strong>EcoBreathe</strong> was conceived to be the go-to place
-              for information on Air Quality, empowering users worldwide and
-              fostering an open-source, collaborative community.
+              EcoBreathe was conceived to be the go-to place for information on
+              Air Quality, empowering users worldwide and fostering an
+              open-source, collaborative community.
             </p>
             <p className="p pt-8">
               {" "}
@@ -67,7 +67,7 @@ const About = () => {
               <h3 className=" lg:w-1/2 mx-auto  p-1 text-lg bg-stone-50 text-green-700 rounded-2xl ">
                 Our Mission
               </h3>
-              <p className=" h4 tracking-wide mt-8 font-extralight text-white">
+              <p className=" h4 tracking-wide mt-8  text-white">
                 <q className="">
                   To be a leading force in global advocacy for improving Air
                   Quality.
@@ -98,12 +98,12 @@ const About = () => {
                 <i className="h2 text-lime-600">
                   <FaLaptopCode />
                 </i>
-                <h3 className="h4 text-stone-900">Technical Contributors</h3>
-                <p className="p mt-8 font-thin text-stone-900">
+                <h3 className="h4 text-stone-950">Technical Contributors</h3>
+                <p className="p mt-8 font-thin text-stone-950">
                   Check our{" "}
                   <a
                     className="text-lime-700 hover:underline duration-300"
-                    href="https://github.com/your-organization"
+                    href="https://github.com/CaseyJamess/AirActive"
                   >
                     GitHub Repo
                   </a>{" "}
@@ -116,8 +116,8 @@ const About = () => {
                 <i className="text-4xl text-brown-600">
                   <FaPencilAlt />
                 </i>
-                <h3 className="h4 text-stone-900">Blog Writers</h3>
-                <p className="p mt-8 font-thin text-stone-900">
+                <h3 className="h4 text-stone-950">Blog Writers</h3>
+                <p className="p mt-8 font-thin text-stone-950">
                   Contribute to our blog with your writing skills and passion
                   for environmental issues. Share insights on clean air,
                   sustainability, and eco-friendly practices to inspire a wider
@@ -129,8 +129,8 @@ const About = () => {
                 <i className="text-4xl text-green-600 mb-4">
                   <FaEnvelope />
                 </i>
-                <h3 className="h4 lg:w-1/2 text-stone-900">Contact Us</h3>
-                <p className="p mt-8 font-thin text-stone-900">
+                <h3 className="h4 lg:w-1/2 text-stone-950">Contact Us</h3>
+                <p className="p mt-8 font-thin text-stone-950">
                   For involvement or inquiries, contact us at
                   <a
                     className="text-green-600 hover:underline duration-300"
@@ -165,7 +165,7 @@ const About = () => {
               </a>
             </div>
             <div className="rounded-2xl mt-4 md:mt-0 p-6 lg:p-12">
-              <p className="h1 text-green-600 -mb-4 text-start mr-auto rounded-full">
+              <p className="h1 text-green-700 -mb-4 text-start mr-auto rounded-full">
                 "
               </p>
               <p className="p mb-8 -mt-8 ">

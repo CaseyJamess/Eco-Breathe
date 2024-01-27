@@ -4,10 +4,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   const pageLinks = [
-    { name: "About", path: "#" },
-    { name: "Login", path: "#" },
-    { name: "FAQs", path: "#" },
-    { name: "Join Today", path: "#" },
+    { name: "Latest", path: "/latest" },
+    { name: "Air Quality", path: "/airquality" },
+    { name: "About Us", path: "/aboutus" },
+    { name: "FAQs", path: "/FAQs" },
+    { name: "Login", path: "/login" },
   ];
 
   const socialLinks = [
@@ -19,7 +20,6 @@ function Footer() {
       icon: <FaLinkedin />,
       path: "https://www.linkedin.com/in/casey-mcardle/",
     },
-    
   ];
 
   const informationLinks = [
@@ -37,10 +37,9 @@ function Footer() {
     },
   ];
 
-  const notify =() => {
-
+  const notify = () => {
     window.alert("Newsletter coming soon - stay tuned");
-  }
+  };
 
   return (
     <footer className="mt-auto w-full mx-auto">
@@ -74,7 +73,7 @@ function Footer() {
                   className="w-full py-2 px-4 border border-stone-400 placeholder:text-stone-200 text-stone-100 bg-green-950 rounded-xl"
                 />
                 <button
-                 onclick="notify()"
+                  onClick={notify}
                   type="submit"
                   className="absolute right-2 transform -translate-y-1/2 top-1/2 bg-green-800 rounded-lg px-2 py-2 text-sm hover:bg-green-900 duration-300"
                 >
@@ -84,7 +83,6 @@ function Footer() {
             </form>
           </div>
 
-         
           {/* Nav links Column */}
           <div className="mt-4 md:mt-0  items-start ">
             <h4 className="h4 mb-4">Quick Links</h4>
@@ -97,7 +95,6 @@ function Footer() {
                 {item.name}
               </a>
             ))}
-            
           </div>
           {/* Information Links Column */}
           <div className="mt-4 md:mt-0   items-start ">
@@ -126,7 +123,9 @@ function Footer() {
                   {item.icon || item.text}
                 </a>
               ))}
-              <div className="block mr-4 mt-2 hover:text-green-600 duration-300 text-xl mb-2">Hire Me!</div>
+              <div className="block mr-4 mt-2 hover:text-green-600 duration-300 text-xl mb-2">
+                Hire Me!
+              </div>
             </div>
           </div>
         </div>

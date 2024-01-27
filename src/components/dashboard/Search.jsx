@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaSearch } from "react-icons/fa";
 import { getLocation } from "../../services/getLocation";
 import { getAirQuality } from "../../services/getAirQuality";
 
-import SearchButton from "./search/SearchButton";
+import SearchButton from "./SearchButton";
 import debounce from "lodash/debounce";
 
 const Search = ({ onAirQualityData, onLocationName }) => {
@@ -21,7 +21,7 @@ const Search = ({ onAirQualityData, onLocationName }) => {
   );
 
   const handleInputChange = (e) => {
-    const updatedValue = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+    const updatedValue = e.target.value.replace(/[^a-zA-Z,\s]/g, "");
     debouncedFunction(updatedValue);
     setInputValue(updatedValue);
     setShouldFetch(true);
@@ -82,7 +82,7 @@ const Search = ({ onAirQualityData, onLocationName }) => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="relative w-11/12 lg:w-2/3 mt-4 xl:mt-8">
+        <div className="relative w-11/12 mt-4 md:mt-6">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 ">
             <FaMapMarkerAlt className="z-20 w-5 h-5 hover:scale-110 duration-300 cursor-pointer text-stone-500 dark:text-stone-400" />
           </div>
@@ -102,7 +102,7 @@ const Search = ({ onAirQualityData, onLocationName }) => {
                 {suggestions.map((location, index) => (
                   <li key={index}>
                     <button
-                      className=" border-b border-l z-10 bg-stone-50 border-r rounded-md text-sm p-2  hover:bg-green-600 hover:text-stone-50 w-full text-start duration-100"
+                      className=" border-b border-l z-10 bg-stone-50 border-r rounded-md text-sm p-2  hover:bg-green-700 hover:text-stone-50 w-full text-start duration-100"
                       type="button"
                       onClick={() => selectSuggestion(location)}
                     >

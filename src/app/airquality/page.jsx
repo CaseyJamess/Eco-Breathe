@@ -126,7 +126,7 @@ const AirQuality = () => {
                   Common Air Pollutants:
                 </h3>
 
-                <ul className=" list-disc font-thin text-stone-50 h4 mt-8 pl-10">
+                <ul className=" font-thin text-stone-50 h4 mt-8 pl-10">
                   <li>Ground-level ozone</li>
                   <li>Particle pollution (liquid droplets)</li>
                   <li>Carbon monoxide</li>
@@ -157,7 +157,7 @@ const AirQuality = () => {
               Please note that the Air Quality Index (AQI) displayed on the
               homepage is a pre-calculated metric provided by OpenWeather,
               ranging from 1 (good) to 5 (hazardous). It's important to mention
-              that different countries and organizations may use their own
+              that different countries and varying organisations may use their own
               metrics to determine the Air Quality Index.
             </p>
             <p className=" p">

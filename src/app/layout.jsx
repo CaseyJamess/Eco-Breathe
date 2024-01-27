@@ -1,9 +1,10 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import { usePathname, useSearchParams } from "next/navigation";
-import "./globals.css";
+import "../../styles/globals.css";
 
 export const metaInfo = {
   title: "AirActive: Breathe Better, Live Healthier",
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
     //setIsSignIUpPage(pathname === "/signup");
   }, [pathname]);
 
-  console.log("pathname:", pathname);
+  //console.log("pathname:", pathname);
 
   return (
     <html lang="en">

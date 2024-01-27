@@ -20,25 +20,24 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full ">
-      <div className=" max-w-screen-xl bg-stone-50 rounded-2xl flex flex-wrap items-center justify-between xl:mx-auto px-2 mx-2 lg:px-4 py-4">
+    <nav className="w-full">
+      <div className="max-w-screen-xl bg-stone-50 rounded-2xl flex flex-wrap items-center justify-between xl:mx-auto px-2 mx-2 lg:px-4 py-4">
         <a href="/" className="flex flex-row items-center hover:cursor-pointer">
           <Image src="/EcoBreathe.svg" alt="Logo" width={44} height={44} />
           <p className="text-base lg:text-lg hidden lg:flex ml-4">
             Eco<span className="text-green-700">Breathe</span>
           </p>
         </a>
-
         {/* Toggle button for mobile */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           type="button"
-          className="inline-flex items-center w-10 h-10 justify-center text-sm text-stone-700 rounded-lg md:hidden"
+          className="inline-flex items-center w-10 h-10 justify-center text-sm rounded-lg md:hidden"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
           <span className="sr-only">Open main menu</span>
-          <FaBars className="w-6 h-6 text-stone-700 " />
+          <FaBars className="w-6 h-6 text-green-700 " />
         </button>
 
         {/* Navigation Menu */}

@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import GaugeChart from "react-gauge-chart";
 import timestamp from "time-stamp";
 
 function Gauge({ airQualityData = {}, locationDisplayName = "" }) {
+  
   const { aqi = 0, components = {}, dateTime } = airQualityData;
   const time = timestamp("HH:mm", new Date(dateTime * 1000));
 
@@ -19,29 +20,26 @@ function Gauge({ airQualityData = {}, locationDisplayName = "" }) {
       <GaugeChart
         id="gauge-chart"
         nrOfLevels={5}
-        needleColor={"#728087"}
-        needleBaseColor={"#728087"}
-        colors={["#22c55e", "#facc15", "#f97316", "#dc2626", "#6B21A8"]}
+        needleColor={"#57534e"}
+        needleBaseColor={"#57534e"}
+        colors={["#15803d", "#eab308", "#ea580c", "#b91c1c", "#6d28d9"]}
         percent={aqiPercent}
         arcWidth={0.12}
         arcPadding={0.01}
         hideText={true}
-        animDelay={0}
+        animDelay={500}
         animateDuration={4000}
       />
       <div
         id="responseData"
-        className="text-center flex flex-col justify-center items-center "
+        className="text-center flex flex-col -mt-4 md:-mt-6 justify-center items-center "
       >
-        <div className="flex flex-col ">
+        <div className="flex h-[140px] overflow:auto flex-col ">
           {locationDisplayName && (
             <div className="flex flex-col flex-wrap">
               <p className="p">Showing Results For:</p>
-              <p className=" text-green-600 text-base lg:text-lg">
-                {locationDisplayName}{" "}
-                <span className="">
-                  at {time}
-                </span>
+              <p className=" text-green-700 text-base lg:text-lg">
+                {locationDisplayName} <span className="">at {time}</span>
               </p>
             </div>
           )}
