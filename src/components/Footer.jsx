@@ -16,10 +16,10 @@ function Footer() {
       icon: <FaGithub />,
       path: "https://github.com/CaseyJamess",
     },
-    {
+  /*  {
       icon: <FaLinkedin />,
       path: "https://www.linkedin.com/in/casey-mcardle/",
-    },
+    },*/
   ];
 
   const informationLinks = [
@@ -124,7 +124,7 @@ function Footer() {
                 </a>
               ))}
               <div className="block mr-4 mt-2 hover:text-green-600 duration-300 text-xl mb-2">
-                Hire Me!
+                
               </div>
             </div>
           </div>

@@ -2,6 +2,11 @@ import Image from "next/image";
 import { FaLaptopCode, FaPencilAlt, FaEnvelope } from "react-icons/fa";
 
 const About = () => {
+
+  function showAlert(event) {
+    event.preventDefault(); 
+    window.alert("Check back for personal page!");
+  }
   return (
     <div className="">
       <header className="text-center max-w-screen-2xl 2xl:mx-auto bg-green-700 rounded-2xl mx-4 px-4 text-stone-50 flex flex-col justify-center p-4 lg:p-8 items-center min-h-[56vh] lg:min-h-[76vh] 2xl:min-h-[50vh]">
@@ -29,6 +34,7 @@ const About = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-green-600 hover:underline hover:opacity-80 duration-300"
+                    onclick="showAlert(event)"
                   >
                     Casey James
                   </a>{" "}
